@@ -1,0 +1,27 @@
+.tab-box-outer {
+  float: left;
+  width: 100%; }
+  .tab-box-outer .tab-list {
+    float: left; }
+    .tab-box-outer .tab-list > li {
+      float: left;
+      border: 1px solid #000;
+      border-left-width: 0; }
+      .tab-box-outer .tab-list > li > a {
+        display: block;
+        padding: 10px 35px;
+        color: #000; }
+        .tab-box-outer .tab-list > li > a.active {
+          color: #fff;
+          background: #222; }
+      .tab-box-outer .tab-list > li:first-child {
+        border-left-width: 1px; }
+  .tab-box-outer .tab-ind {
+    float: left;
+    width: 100%;
+    display: none;
+    min-height: 250px;
+    border: 1px solid #000;
+    margin-top: 1px; }
+    .tab-box-outer .tab-ind.active {
+      display: block; }

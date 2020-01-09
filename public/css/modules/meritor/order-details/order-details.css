@@ -1,0 +1,111 @@
+.order-details-table .meritor-part{
+    width: 16%;
+} 
+
+.order-details-table .customer-po{
+    width: 16%
+}
+.order-details-table .request-date{
+    width: 19%;
+} 
+
+.order-details-table .qty-ordered{
+    width: 10%
+}
+
+.order-details-table .line-qty{
+    width: 10%
+}
+
+.order-details-table .status{
+    width: 16%
+}
+
+.order-details-table .invoice{
+    width: 13%
+}
+/* css for dynamic column*/
+.order-details-table.one-col-extra .meritor-part{
+    width: 14%;
+} 
+
+.order-details-table.one-col-extra .customer-po{
+    width: 14%
+}
+.order-details-table.one-col-extra .request-date{
+    width: 17%;
+} 
+
+.order-details-table.one-col-extra .qty-ordered{
+    width: 9%
+}
+
+.order-details-table.one-col-extra .line-qty{
+    width: 9%
+}
+
+.order-details-table.one-col-extra .status{
+    width: 15%
+}
+
+.order-details-table.one-col-extra .invoice{
+    width: 12%
+}
+
+.order-details-table.one-col-extra .return-qty{
+    width: 10%;
+    text-align:center;
+}
+
+.order-details-table .return-qty input[type="number"]{
+    display: inline-block;
+    width: 55px;
+    border: 1px solid #d0cdd1;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 7px;
+}
+
+.table-header-ind .table-col.promise-date  .date-box-wrapper{
+    top: 79px;
+}
+
+.table-header-ind .table-col.revised-promise-date .date-box-wrapper{
+    top: 79px;
+    left: -300px;
+}
+
+.footer-btn-wrap{
+    float: right;
+}
+.footer-btn-wrap.left{
+    float: left;
+}
+.footer-btn-wrap > button{
+    background: #b20838;
+    border: 0;
+    color: #ffffff;
+    padding: 3px 10px;
+    cursor: pointer;
+    line-height:27px;
+}
+
+.footer-btn-wrap > button.cancel-request-return{
+    background: #767676;
+}
+
+.table-header-ind .table-col.return-qty{
+    background: #b20838;
+   
+}
+.table-header-ind .table-col.return-qty > h3{
+    color: #fff;
+}
+
+.overflow-wrapper{
+    min-height: auto;
+}
+
+.order-details-table .data-table-list > li.visiblehide .table-col.qty-ordered > p{
+    visibility: hidden;
+}

@@ -1,0 +1,130 @@
+.box-layout{
+    float: left;
+    width: 100%;
+}
+.box-row{
+    width: 100%;
+    
+}
+
+
+.box-ind{
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.box-ind .box-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.box-ind-content{
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    min-height: 80px;
+    padding-left: 95px;
+    background-size: 75px !important;
+}
+
+.box-ind-content h3{
+    font-size: 28px;
+    line-height: 36px;
+}
+.box-ind-content p{
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 275px;
+}
+
+.box-ind-inner {
+    display: inline-block;
+    width: 85%;
+    text-align: left;
+}
+
+
+@media only screen and (min-width:992px){
+    .box-row{
+        border-top: 1px solid #000;
+        display: table;
+    }
+    .box-row:last-child{
+        border-bottom: 1px solid #000;
+    }
+    .box-ind:last-child{
+        border-right: 1px solid #000;
+    }
+    .box-ind{
+        display: table-cell;
+        vertical-align: middle;
+        width: 33.33%;
+        height: 250px;
+        border-left: 1px solid #000;
+    }
+}
+
+@media only screen and (max-width:991px){
+    .box-row{
+        float: left;
+    }
+    .box-ind{
+        display: table;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .box-ind-inner{
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        border-bottom: 1px solid #000;
+        height: 140px;
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width:767px){
+    .box-ind-content h3{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .box-ind-content p{
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 275px;
+    }
+    .box-ind-content{
+        background-size: 55px !important;
+    }
+}
+
+.box-ind-content.open-orders{
+    background: url('../../../../images/meritor-icons/OrderApprovalsIcon.jpg') no-repeat left top;
+    
+}
+.box-ind-content.order-history{
+    background: url('../../../../images/meritor-icons/OrderHistoryIcon.jpg') no-repeat left top;
+    
+}
+.box-ind-content.view-invoices{
+    background: url('../../../../images/meritor-icons/InvoiceIcon.jpg') no-repeat left top;
+    
+}
+.box-ind-content.notifications{
+    background: url('../../../../images/meritor-icons/NotificationsIcon.jpg') no-repeat left top;
+    
+}
+.box-ind-content.order-proposals{
+    background: url('../../../../images/meritor-icons/OrderProposalIcon.jpg') no-repeat left top;
+    
+}
+.box-ind-content.online-returns{
+    background: url('../../../../images/meritor-icons/ReturnsIcon.jpg') no-repeat left top;
+    
+}

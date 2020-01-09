@@ -1,0 +1,136 @@
+<script id="tableWrapper" type="text/x-handlebars-template">
+    <div class="table-top-bar">
+		<div class="top-bar-left">
+        <h3>{{this.headerTitle}}</h3>
+		</div>
+        <div class="top-bar-right">
+            <div class="clear-search-wrap">
+                <button class="clear-search-button">Clear Filter</button>
+            </div>
+            <div class="table-pagination-wrap"></div>
+        </div>
+    </div>
+    <div class="overflow-wrapper">
+        <div class="data-table-inner {{this.tableClass}}" id="{{this.tableId}}">
+            <div id="table-header" class="data-table-header"></div>
+            <div id="table-list-wrapper"></div>
+        </div>
+    </div>
+    <div class="table-footer">
+        <div class="table-pagination-wrap"></div>
+    </div>
+</script>
+
+<script id="tableHeader" type="text/x-handlebars-template">
+    <div class="table-header-ind">
+        {{#each this.headerConfig as |headerInd|}}
+        <div class="table-col table-col-{{headerInd.className}} {{#ifEq ../this.currentSortKey headerInd.keyName}}{{../../this.currentSortType}}{{/ifEq}}" data-colKeyName="{{headerInd.keyName}}">
+            {{#if headerInd.sorting}}
+            <h3 class="sorting-title" data-appliedSorting="{{#ifEq ../../this.currentSortKey headerInd.keyName}}{{../../../this.currentSortType}}{{/ifEq}}">
+                <span class="title">{{headerInd.title}}</span>
+                <span class="sorting-control"></span>
+            </h3>
+            {{else}}
+                <h3><span class="title">{{headerInd.title}}</span></h3>
+            {{/if}}
+            {{#ifEq headerInd.operationType "search"}}
+                <span class="search-icon"><i class="fa fa-search"></i></span>
+                <div class="search-box-ind">
+                    <input type="text" data-searchKey="{{headerInd.keyName}}" placeholder="Filter Results"/>
+                </div>
+            {{/ifEq}}
+
+            {{#ifEq headerInd.operationType "showList"}}
+                <span class="list-icon" data-colKey="{{headerInd.keyName}}" data-listBoxId="showListWrapper{{headerInd.keyName}}"><i class="fa fa-list"></i></span>
+                <div class="list-box-wrapper" id="showListWrapper{{headerInd.keyName}}"></div>
+                <div class="selected-options-text"></div>
+            {{/ifEq}}
+
+            {{#ifEq headerInd.operationType "fromToDate"}}
+                <span class="date-icon" data-colKey="{{headerInd.keyName}}" data-dateboxid="datebox{{headerInd.keyName}}"><i class="fa fa-calendar"></i></span>
+                <div class="date-box-wrapper" id="datebox{{headerInd.keyName}}">
+                    <a href="#" class="close-date-picker" data-dateboxid="datebox{{headerInd.keyName}}"><i class="fa fa-times"></i></a>
+                    <div class="calender-wrapper">
+                        <div id="from-date-calender{{headerInd.keyName}}" data-keyName="{{headerInd.keyName}}" class="datepicker-here from-to-calender" data-language='en'></div>
+                        <div id="to-date-calender{{headerInd.keyName}}" data-keyName="{{headerInd.keyName}}" class="datepicker-here from-to-calender" data-language='en'></div>
+                    </div>
+
+                    <div class="calender-bottom">
+                        {{#if ../../this.isExpandDateButton}}
+                            <button type="button" class="date-advance-search-btn">Expand Date Range</button>
+                        {{/if}}
+                        <button type="button" class="date-submit-btn" data-keyName="{{headerInd.keyName}}">Filter</button>
+                    </div>
+                </div>
+                <div class="fromto-dates-text" id="dates-text{{headerInd.keyName}}"></div>
+            {{/ifEq}}
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<script id="tableList" type="text/x-handlebars-template">
+    {{#if this.data}}
+    <ul id="table-list" class="data-table-list">
+        {{#each this.data as |returnInd|}}
+            <li>
+                <div class="table-list-ind">
+                    <div class="table-col table-col-shipto">
+                        <p>{{returnInd.shipto}}</p>
+                    </div>
+                    <div class="table-col table-col-date-ordered">
+                        <p>{{formattedDate returnInd.orderDate}}</p>
+                    </div>
+                    <div class="table-col table-col-order-no">
+                        <p>{{returnInd.meritorOrderNo}}</p>
+                    </div>
+                    <div class="table-col table-col-customer-po">
+                        <p>{{returnInd.custPONo}}</p>
+                    </div>
+                    <div class="table-col table-col-view-details">
+                       <p><a href="#">View Details</a></p>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+    {{else}}
+        <div class="no-data-found"><h3>No Data Found</h3></div>
+    {{/if}}
+</script>
+
+<script id="columnList" type="text/x-handlebars-template">
+    <ul class="list">
+        {{#each this.columnListArr as |listInd|}}
+            <li>
+                <div class="list-ind" data-id="{{listInd}}">
+                    <input type="checkbox" id="shiplist{{@index}}" value="{{listInd}}" data-shipCode="" {{{checkIsSelected listInd ../this.selectedCodes}}}>
+                    <label for="shiplist{{@index}}">{{listInd}}</label>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+    <div class="filter-btn-row">
+        <button type="button" class="options-clearall-btn">Clear All</button>
+        <button type="button" class="options-filter-btn">Filter</button>
+    </div>
+</script>
+
+<script id="tablePagination" type="text/x-handlebars-template">
+    <ul class="pagination-list">
+        {{#if this.willShowPrevButton}}
+        <li><span class="prev-next-btn prev-btn"><i class="fa fa-angle-left"></i></span></li>
+        {{/if}}
+        {{#each this.pageList as |pageListInd| }}
+        {{#ifEq pageListInd "..."}}
+            <li class="blank">{{pageListInd}}</li>
+            {{else}}
+            <li class="{{#ifEq pageListInd ../../this.currentPageId}}active{{/ifEq}}"><span class="page-id-btn" data-pageId="{{pageListInd}}">{{pageListInd}}</span></li>
+        {{/ifEq}}
+        {{/each}}
+        {{#if this.willShowNextButton}}
+        <li><span class="prev-next-btn next-btn"><i class="fa fa-angle-right"></i></span></li>
+        {{/if}}
+    </ul>
+</script>
+

@@ -1,0 +1,589 @@
+<div class="row">
+<div class="col-12">
+
+    <!-- Classic tabs -->
+    <div id="section_Results" class="classic-tabs">
+    <!-- Nav tabs -->
+    <ul id="con_ResultsTabs" class="nav nav-justified tabs-vdl" role="tablist">
+        <li id="tab_All" class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#panel1a" role="tab">All resources</a>
+        </li>
+        <li id="tab_KB" class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#panel2a" role="tab">Knowledge base</a>
+        </li>
+        <li id="tab_Docs" class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#panel3a" role="tab">Documentation</a>
+        </li>
+        <li id="tab_Cases" class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#panel4a" role="tab">Cases</a>
+        </li>
+        <li id="tab_Etracks" class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#panel5a" role="tab">ETracks</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!--
+        ***********************************************************************************************************************
+        DEVS: For highlighting matching text with the search keyword use the <mark></mark> tag instead of <b></b>.
+                i.e. Lorem <mark>ipsum</mark> dolor set amit.
+        ***********************************************************************************************************************
+        -->
+
+        <!-- All Resources Tab -->
+        <div class="tab-pane fade in show active" id="panel1a" role="tabpanel">
+        <!-- Results Count/Sort -->
+        <!--
+        ***********************************************************************************************************************
+            DEVS: Make sure the "Browse" versus "Search" context is maintained for the filter.
+                Functionality will remain as it is currently implemented.
+        ***********************************************************************************************************************
+        -->
+        <div class="text-right mb-3 d-flex justify-content-end align-items-center">
+            <span id="search-result-count" class="results-counter mr-2">${count} results sorted by</span>
+            <select id="sort_filter" class="mdb-select" data-stop-refresh="true">
+            <option value="1" selected>Trending</option>
+            <option value="2">Last published</option>
+            </select>
+        </div>
+        <!-- /Results Count/Sort -->
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-5 col-xl-3" id="sideBarPlaceholder">   
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-xl-9" id="resultListPlaceholder">
+            </div>
+        </div>
+
+        </div>
+        <!-- /All Resources Tab -->
+        <div class="tab-pane fade" id="panel2a" role="tabpanel">
+        <!-- Results Count/Sort -->
+        <!--
+        ***********************************************************************************************************************
+            DEVS: Make sure the "Browse" versus "Search" context is maintained for the filter.
+                Functionality will remain as it is currently implemented.
+        ***********************************************************************************************************************
+        -->
+        <div class="text-right mb-3 d-flex justify-content-end align-items-center">
+            <span id="search-result-count" class="results-counter mr-2">${count} results sorted by</span>
+            <select id="sort_filter" class="mdb-select" data-stop-refresh="true">
+            <option value="1" selected>Trending</option>
+            <option value="2">Last published</option>
+            </select>
+        </div>
+        <!-- /Results Count/Sort -->
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-5 col-xl-3">
+            <div class="section_Facets mb-3 mb-sm-5">
+                <!-- KNOWLEDGE BASE FACETS -->
+                <div id="con_FacetsKnowledgeBase">
+                <div id="con_FacetKBProduct" class="mb-5">
+                    <div class="section-title">Products</div>
+                    <ul id="dynamic-facet-product_name-options" data-facet-selected-option="undefined">
+                    <li><a href="javascript:void(0)" id="1" data-product_name="NetBackup"><span>NetBackup</span></a><span class="badge badge-pill badge-info">3721</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Backup Exec"><span>Backup Exec</span></a><span class="badge badge-pill badge-info">1106</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Enterprise Vault"><span>Enterprise Vault</span></a><span class="badge badge-pill badge-info">453</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="InfoScale &amp; Storage Foundation"><span>InfoScale &amp; Storage Foundation</span></a><span class="badge badge-pill badge-info">247</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="System Recovery"><span>System Recovery</span></a><span class="badge badge-pill badge-info">211</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Appliances"><span>Appliances</span></a><span class="badge badge-pill badge-info">190</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="eDiscovery Platform"><span>eDiscovery Platform</span></a><span class="badge badge-pill badge-info">103</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Desktop Laptop Option"><span>Desktop Laptop Option</span></a><span class="badge badge-pill badge-info">47</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Enterprise Vault.cloud"><span>Enterprise Vault.cloud</span></a><span class="badge badge-pill badge-info">18</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="CommandCentral"><span>CommandCentral</span></a><span class="badge badge-pill badge-info">14</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Access"><span>Access</span></a><span class="badge badge-pill badge-info">12</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="CloudPoint"><span>CloudPoint</span></a><span class="badge badge-pill badge-info">12</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Data Insight"><span>Data Insight</span></a><span class="badge badge-pill badge-info">12</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Disaster Recovery Orchestrator"><span>Disaster Recovery Orchestrator</span></a><span class="badge badge-pill badge-info">10</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Information Map"><span>Information Map</span></a><span class="badge badge-pill badge-info">8</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Resiliency Platform &amp; CloudMobility"><span>Resiliency Platform &amp; CloudMobility</span></a><span class="badge badge-pill badge-info">7</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Velocity"><span>Velocity</span></a><span class="badge badge-pill badge-info">7</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="HyperScale"><span>HyperScale</span></a><span class="badge badge-pill badge-info">6</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Risk Advisor"><span>Risk Advisor</span></a><span class="badge badge-pill badge-info">6</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="AdvisorMail"><span>AdvisorMail</span></a><span class="badge badge-pill badge-info">5</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="ApplicationHA"><span>ApplicationHA</span></a><span class="badge badge-pill badge-info">5</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="HPE Helion and Veritas Continuity"><span>HPE Helion and Veritas Continuity</span></a><span class="badge badge-pill badge-info">5</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="SaaS Backup"><span>SaaS Backup</span></a><span class="badge badge-pill badge-info">5</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Cognitive Object Storage"><span>Cognitive Object Storage</span></a><span class="badge badge-pill badge-info">4</span></li>
+                    <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+                <div id="con_FacetKBProductFeature" class="mb-5">
+                    <div class="section-title">Product feature</div>
+                    <ul id="dynamic-facet-component-options" data-facet-selected-option="undefined">
+                    <li><a href="javascript:void(0)" id="1" data-component="Access"><span>Access</span></a><span class="badge badge-pill badge-info">113</span></li>
+                    <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+                <div id="con_FacetKBArticleTypes" class="mb-5">
+                    <div class="section-title">Article type</div>
+                    <ul id="dynamic-facet-ArticleType_s-options" data-facet-selected-option="undefined">
+                    <li><a href="javascript:void(0)" id="1" data-articletype_s="Technical Solution"><span>Technical Solution</span></a><span class="badge badge-pill badge-info">5190</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-articletype_s="Download"><span>Download</span></a><span class="badge badge-pill badge-info">393</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-articletype_s="How-To"><span>How-To</span></a><span class="badge badge-pill badge-info">319</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-articletype_s="Alert"><span>Alert</span></a><span class="badge badge-pill badge-info">106</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-articletype_s="Late Breaking News"><span>Late Breaking News</span></a><span class="badge badge-pill badge-info">20</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-articletype_s="Product Overview"><span>Product Overview</span></a><span class="badge badge-pill badge-info">17</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-articletype_s="Customer Care Product Licensing Overview"><span>Product Licensing Overview</span></a><span class="badge badge-pill badge-info">7</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-articletype_s="Customer Care &amp; Order to Cash Help Artic"><span>Order to Cash Help Article</span></a><span class="badge badge-pill badge-info">3</span></li>
+                    <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+                <div id="con_FacetKBArticleStatus" class="mb-5">
+                    <div class="section-title">Article status</div>
+                    <ul id="dynamic-facet-status_s-options" data-facet-selected-option="undefined">
+                    <li><a href="javascript:void(0)" id="1" data-status_s="Published"><span>Published</span></a><span class="badge badge-pill badge-info">6005</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-status_s="Draft"><span>Draft</span></a><span class="badge badge-pill badge-info">35</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-status_s="Review-Private"><span>Review-Private</span></a><span class="badge badge-pill badge-info">15</span></li>
+                    <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+                <div id="con_FacetKBArticleAccess">
+                    <div class="section-title">Article access level</div>
+                    <ul id="dynamic-facet-AccessLevels_s-options" data-facet-selected-option="undefined">
+                    <li><a href="javascript:void(0)" id="1" data-accesslevels_s="Public"><span>Public</span></a><span class="badge badge-pill badge-info">4345</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-accesslevels_s="Internal"><span>Internal</span></a><span class="badge badge-pill badge-info">1708</span></li>
+                    <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+                </div>
+                <!-- /KNOWLEDGE BASE FACETS -->
+            </div>
+            <!-- RELATED SEARCHES -->
+            <!--
+            ***********************************************************************************************************************
+                DEVS: Display related searches if the search keyword is NOT "*" or null. Otherwise hide it.
+            ***********************************************************************************************************************
+            -->
+            <div class="con_RelatedSearches mb-5">
+                <div class="section-title">Related searches</div>
+                <ul>
+                <li><a href="javascript:void(0)" data-related-search="Backup and Restore User Guide Netbackup"><span>Backup and Restore User Guide Netbackup</span></a></li>
+                <li><a href="javascript:void(0)" data-related-search="vmware restore"><span>vmware restore</span></a></li>
+                </ul>
+            </div>
+            <!-- RELATED SEARCHES -->
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-xl-9">
+            <!-- KB Article -->
+            <div class="con_KBArticle d-flex justify-content-between align-items-start">
+                <div class="icn_type mr-3 text-center">
+                <img src="images/img/content/icn-knowledgebase-40x40.svg" />
+                <div class="d-flex justify-content-between align-items-center mt-1">
+                    <span class="mdi mdi-emoticon-excited mr-1"></span><span>999</span>
+                </div>
+                </div>
+                <div class="con_ArticleSummary w-100">
+                <a href="javascript:;" target="_parent">
+                    <h5 class="txt_ArticleTitle mb-1">${featured_result_title}</h5>
+                </a>
+                <span class="txt_ArticleDate date-text mr-3">${date_yyyy-mm-dd}</span><span class="badge badge-warning">Restricted content</span>
+                <p class="txt_ArticleText desc-text mt-1">${featured_result_summary}</p>
+                </div>
+            </div>
+            <!-- /KB Article -->
+            <!-- KB Article -->
+            <div class="con_KBArticle d-flex justify-content-between align-items-start">
+                <div class="icn_type mr-3 text-center">
+                <img src="images/img/content/icn-knowledgebase-40x40.svg" />
+                <div class="d-flex justify-content-between align-items-center mt-1">
+                    <span class="mdi mdi-emoticon-excited mr-1"></span><span>999</span>
+                </div>
+                </div>
+                <div class="con_ArticleSummary w-100">
+                <a href="javascript:;" target="_parent">
+                    <h5 class="txt_ArticleTitle mb-1">Lorem ipsum dolor sit amet, consectetur.</h5>
+                </a>
+                <span class="txt_ArticleDate date-text mr-3">2018-11-27</span><span class="badge badge-warning">Restricted content</span>
+                <p class="txt_ArticleText desc-text mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.</p>
+                </div>
+            </div>
+            <!-- /KB Article -->
+            <!-- KB Article -->
+            <div class="con_KBArticle d-flex justify-content-between align-items-start">
+                <div class="icn_type mr-3 text-center">
+                <img src="images/img/content/icn-knowledgebase-40x40.svg" />
+                <div class="d-flex justify-content-between align-items-center mt-1">
+                    <span class="mdi mdi-emoticon-excited mr-1"></span><span>999</span>
+                </div>
+                </div>
+                <div class="con_ArticleSummary w-100">
+                <a href="javascript:;" target="_parent">
+                    <h5 class="txt_ArticleTitle mb-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                </a>
+                <span class="txt_ArticleDate date-text mr-3">2018-11-27</span>
+                <p class="txt_ArticleText desc-text mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt id culpa, maxime in, sapiente tempore tenetur ipsum. Iure reiciendis pariatur necessitatibus voluptatum provident totam, commodi voluptas beatae repudiandae dolorum nostrum repellat ratione quis blanditiis, ex nam, nihil molestiae soluta similique quos eligendi! Numquam, dolorem ducimus quisquam odio, minima quos adipisci.</p>
+                </div>
+            </div>
+            <!-- /KB Article -->
+            <!-- More Results Button -->
+            <div class="text-right mt-5">
+                <!--
+                ***********************************************************************************************************************
+                DEVS: Program the button as needed.
+                ***********************************************************************************************************************
+                -->
+                <button type="button" name="btn_ShowMore" class="btn btn-secondary">More results</button>
+            </div>
+            <!-- /More Results Button -->
+            </div>
+        </div>
+
+        </div>
+        <div class="tab-pane fade" id="panel3a" role="tabpanel">
+        <!-- Results Count/Sort -->
+        <!--
+        ***********************************************************************************************************************
+            DEVS: Make sure the "Browse" versus "Search" context is maintained for the filter.
+                Functionality will remain as it is currently implemented.
+        ***********************************************************************************************************************
+        -->
+        <div class="text-right mb-3 d-flex justify-content-end align-items-center">
+            <span id="search-result-count" class="results-counter mr-2">${count} results sorted by</span>
+            <select id="sort_filter" class="mdb-select" data-stop-refresh="true">
+            <option value="1" selected>Trending</option>
+            <option value="2">Last published</option>
+            </select>
+        </div>
+        <!-- /Results Count/Sort -->
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-5 col-xl-3">
+            <div class="section_Facets mb-3 mb-sm-5">
+                <!-- DOCUMENTATION FACETS -->
+                <div id="con_FacetsDocumentation">
+                <div id="con_FacetDocsProduct" class="mb-5">
+                    <div class="section-title">Products</div>
+                    <ul id="dynamic-facet-product_name-options" data-facet-selected-option="">
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Access"><span>Access</span></a><span class="badge badge-pill badge-info">4729</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="AdvisorMail"><span>AdvisorMail</span></a><span class="badge badge-pill badge-info">187</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Appliances"><span>Appliances</span></a><span class="badge badge-pill badge-info">7796</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="ApplicationHA"><span>ApplicationHA</span></a><span class="badge badge-pill badge-info">236</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Backup Exec"><span>Backup Exec</span></a><span class="badge badge-pill badge-info">4332</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="CloudPoint"><span>CloudPoint</span></a><span class="badge badge-pill badge-info">11</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Cognitive Object Storage"><span>Cognitive Object Storage</span></a><span class="badge badge-pill badge-info">46</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="CommandCentral"><span>CommandCentral</span></a><span class="badge badge-pill badge-info">22</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Data Insight"><span>Data Insight</span></a><span class="badge badge-pill badge-info">2624</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Desktop Laptop Option"><span>Desktop Laptop Option</span></a><span class="badge badge-pill badge-info">121</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Disaster Recovery Orchestrator"><span>Disaster Recovery Orchestrator</span></a><span class="badge badge-pill badge-info">9</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="eDiscovery Platform"><span>eDiscovery Platform</span></a><span class="badge badge-pill badge-info">121</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Enterprise Vault"><span>Enterprise Vault</span></a><span class="badge badge-pill badge-info">12574</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Enterprise Vault.cloud"><span>Enterprise Vault.cloud</span></a><span class="badge badge-pill badge-info">768</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="HPE Helion and Veritas Continuity"><span>HPE Helion and Veritas Continuity</span></a><span class="badge badge-pill badge-info">11</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="HyperScale"><span>HyperScale</span></a><span class="badge badge-pill badge-info">24</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Information Map"><span>Information Map</span></a><span class="badge badge-pill badge-info">61</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="InfoScale &amp; Storage Foundation"><span>InfoScale &amp; Storage Foundation</span></a><span class="badge badge-pill badge-info">87309</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="NetBackup"><span>NetBackup</span></a><span class="badge badge-pill badge-info">36674</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Resiliency Platform &amp; CloudMobility"><span>Resiliency Platform &amp; CloudMobility</span></a><span class="badge badge-pill badge-info">897</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Risk Advisor"><span>Risk Advisor</span></a><span class="badge badge-pill badge-info">120</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="SaaS Backup"><span>SaaS Backup</span></a><span class="badge badge-pill badge-info">62</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="System Recovery"><span>System Recovery</span></a><span class="badge badge-pill badge-info">1023</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Velocity"><span>Velocity</span></a><span class="badge badge-pill badge-info">493</span></li>
+                    <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+                <div id="con_FacetDocsPlatform" class="mb-5">
+                    <div class="section-title">Platform</div>
+                    <ul id="dynamic-facet-component-options" data-facet-selected-option="undefined">
+                    <li><a href="javascript:void(0)" id="1" data-component="Access"><span>Linux</span></a><span class="badge badge-pill badge-info">15</span></li>
+                    <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+                <div id="con_FacetDocsTypes" class="mb-5">
+                    <div class="section-title">Documentation type</div>
+                    <ul id="dynamic-facet-category-options" data-facet-selected-option="">
+                    <li><a href="javascript:void(0)" id="1" data-category="Administration Guide"><span>Administration Guide</span></a><span class="badge badge-pill badge-info">26</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-category="Compatibility Lists"><span>Compatibility Lists</span></a><span class="badge badge-pill badge-info">295</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-category="Installation and Configuration"><span>Installation and Configuration</span></a><span class="badge badge-pill badge-info">16049</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-category="Product Guides"><span>Product Guides</span></a><span class="badge badge-pill badge-info">121081</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-category="Release Notes"><span>Release Notes</span></a><span class="badge badge-pill badge-info">14043</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-category="Supplemental Content"><span>Supplemental Content</span></a><span class="badge badge-pill badge-info">1030</span></li>
+                    <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+                <div id="con_FacetDocsLanguage">
+                    <div class="section-title">Language</div>
+                    <ul id="dynamic-facet-status_s-options" data-facet-selected-option="undefined">
+                    <li><a href="javascript:void(0)" id="1" data-status_s="Published"><span>English</span></a><span class="badge badge-pill badge-info">160241</span></li>
+                    <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+                </div>
+                <!-- /DOCUMENTATION FACETS -->
+            </div>
+            <!-- RELATED SEARCHES -->
+            <!--
+            ***********************************************************************************************************************
+                DEVS: Display related searches if the search keyword is NOT "*" or null. Otherwise hide it.
+            ***********************************************************************************************************************
+            -->
+            <div class="con_RelatedSearches mb-5">
+                <div class="section-title">Related searches</div>
+                <ul>
+                <li><a href="javascript:void(0)" data-related-search="Backup and Restore User Guide Netbackup"><span>Backup and Restore User Guide Netbackup</span></a></li>
+                <li><a href="javascript:void(0)" data-related-search="vmware restore"><span>vmware restore</span></a></li>
+                </ul>
+            </div>
+            <!-- RELATED SEARCHES -->
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-xl-9">
+            <!-- Documentation Item -->
+            <div class="con_DocItem d-flex justify-content-between align-items-start">
+                <div class="icn_type mr-3 text-center">
+                <img src="images/img/content/icn-documentation-40x40.svg" />
+                </div>
+                <div class="con_ItemSummary w-100">
+                <a href="javascript:;" target="_parent">
+                    <h5 class="txt_ItemTitle mb-1">${manual_title} : ${version_number}</h5>
+                </a>
+                <h5 class="txt_DocSectionTitle mb-1">${section_title}</h5>
+                <span class="txt_ItemDate date-text mr-3">${date_text_yyyy-mm-dd}</span>
+                <p class="txt_ItemText desc-text mt-1">${desc_text}</p>
+                </div>
+            </div>
+            <!-- /Documentation Item -->
+
+            <!-- Documentation Item -->
+            <div class="con_DocItem d-flex justify-content-between align-items-start">
+                <div class="icn_type mr-3 text-center">
+                <img src="images/img/content/icn-documentation-40x40.svg" />
+                </div>
+                <div class="con_ItemSummary w-100">
+                <a href="javascript:;" target="_parent">
+                    <h5 class="txt_ItemTitle mb-1">Veritas NetBackup™ Bare Metal Restore™ Administrator's Guide : v8.0</h5>
+                </a>
+                <h5 class="txt_DocSectionTitle mb-1">Creating bootable CD or DVD image for Fast Restore SRT</h5>
+                <span class="txt_ItemDate date-text mr-3">2017-07-25</span>
+                <p class="txt_ItemText desc-text mt-1">Creating bootable CD or DVD image for Fast Restore SRT The steps for creating bootable CD DVD images from Fast Restore SRTs is as follows: Select the shared resource tree See ...</p>
+                </div>
+            </div>
+            <!-- /Documentation Item -->
+            <!-- More Results Button -->
+            <div class="text-right mt-5">
+                <!--
+                ***********************************************************************************************************************
+                DEVS: Program the button as needed.
+                ***********************************************************************************************************************
+                -->
+                <button type="button" name="btn_ShowMore" class="btn btn-secondary">More results</button>
+            </div>
+            <!-- /More Results Button -->
+            </div>
+        </div>
+
+        </div>
+        <div class="tab-pane fade" id="panel4a" role="tabpanel">
+        <!-- Results Count/Sort -->
+        <!--
+        ***********************************************************************************************************************
+            DEVS: Make sure the "Browse" versus "Search" context is maintained for the filter.
+                Functionality will remain as it is currently implemented.
+        ***********************************************************************************************************************
+        -->
+        <div class="text-right mb-3 d-flex justify-content-end align-items-center">
+            <span id="search-result-count" class="results-counter mr-2">${count} results sorted by</span>
+            <select id="sort_filter" class="mdb-select" data-stop-refresh="true">
+            <option value="1" selected>Trending</option>
+            <option value="2">Last published</option>
+            </select>
+        </div>
+        <!-- /Results Count/Sort -->
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-5 col-xl-3">
+            <div class="section_Facets mb-3 mb-sm-5">
+                <!-- CASES FACETS -->
+                <div id="con_FacetsCases">
+                <div id="con_FacetCasesType" class="mb-5">
+                    <div class="section-title">Cases</div>
+                    <ul id="dynamic-facet-dw_content_source-options" data-facet-selected-option="undefined">
+                    <li><a href="javascript:void(0)" id="1" data-dw_content_source="Customer Care"><span>Customer Care</span></a><span class="badge badge-pill badge-info">103072</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-dw_content_source="Order Management"><span>Order Management</span></a><span class="badge badge-pill badge-info">188394</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-dw_content_source="Technical"><span>Technical</span></a><span class="badge badge-pill badge-info">308247</span></li>
+                    <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+                </div>
+                <div id="con_FacetCasesProduct">
+                <div class="section-title">Products</div>
+                <ul id="dynamic-facet-product_name-options" data-facet-selected-option="">
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Access"><span>Access</span></a><span class="badge badge-pill badge-info">4729</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="AdvisorMail"><span>AdvisorMail</span></a><span class="badge badge-pill badge-info">187</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Appliances"><span>Appliances</span></a><span class="badge badge-pill badge-info">7796</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="ApplicationHA"><span>ApplicationHA</span></a><span class="badge badge-pill badge-info">236</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Backup Exec"><span>Backup Exec</span></a><span class="badge badge-pill badge-info">4332</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="CloudPoint"><span>CloudPoint</span></a><span class="badge badge-pill badge-info">11</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Cognitive Object Storage"><span>Cognitive Object Storage</span></a><span class="badge badge-pill badge-info">46</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="CommandCentral"><span>CommandCentral</span></a><span class="badge badge-pill badge-info">22</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Data Insight"><span>Data Insight</span></a><span class="badge badge-pill badge-info">2624</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Desktop Laptop Option"><span>Desktop Laptop Option</span></a><span class="badge badge-pill badge-info">121</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Disaster Recovery Orchestrator"><span>Disaster Recovery Orchestrator</span></a><span class="badge badge-pill badge-info">9</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="eDiscovery Platform"><span>eDiscovery Platform</span></a><span class="badge badge-pill badge-info">121</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Enterprise Vault"><span>Enterprise Vault</span></a><span class="badge badge-pill badge-info">12574</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Enterprise Vault.cloud"><span>Enterprise Vault.cloud</span></a><span class="badge badge-pill badge-info">768</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="HPE Helion and Veritas Continuity"><span>HPE Helion and Veritas Continuity</span></a><span class="badge badge-pill badge-info">11</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="HyperScale"><span>HyperScale</span></a><span class="badge badge-pill badge-info">24</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Information Map"><span>Information Map</span></a><span class="badge badge-pill badge-info">61</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="InfoScale &amp; Storage Foundation"><span>InfoScale &amp; Storage Foundation</span></a><span class="badge badge-pill badge-info">87309</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="NetBackup"><span>NetBackup</span></a><span class="badge badge-pill badge-info">36674</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Resiliency Platform &amp; CloudMobility"><span>Resiliency Platform &amp; CloudMobility</span></a><span class="badge badge-pill badge-info">897</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Risk Advisor"><span>Risk Advisor</span></a><span class="badge badge-pill badge-info">120</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="SaaS Backup"><span>SaaS Backup</span></a><span class="badge badge-pill badge-info">62</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="System Recovery"><span>System Recovery</span></a><span class="badge badge-pill badge-info">1023</span></li>
+                    <li><a href="javascript:void(0)" id="1" data-product_name="Velocity"><span>Velocity</span></a><span class="badge badge-pill badge-info">493</span></li>
+                    <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                </ul>
+                </div>
+                <div id="con_FacetCasesType">
+                <div class="section-title">Case type</div>
+                <ul id="dynamic-facet-component-options" data-facet-selected-option="undefined">
+                    <li><a href="javascript:void(0)" id="1" data-component="Access"><span>Support portal assistance</span></a><span class="badge badge-pill badge-info">74</span></li>
+                    <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                </ul>
+                </div>
+                <!-- /CASES FACETS -->
+            </div>
+            <!-- RELATED SEARCHES -->
+            <!--
+            ***********************************************************************************************************************
+                DEVS: Display related searches if the search keyword is NOT "*" or null. Otherwise hide it.
+            ***********************************************************************************************************************
+            -->
+            <div class="con_RelatedSearches mb-5">
+                <div class="section-title">Related searches</div>
+                <ul>
+                <li><a href="javascript:void(0)" data-related-search="Backup and Restore User Guide Netbackup"><span>Backup and Restore User Guide Netbackup</span></a></li>
+                <li><a href="javascript:void(0)" data-related-search="vmware restore"><span>vmware restore</span></a></li>
+                </ul>
+            </div>
+            <!-- RELATED SEARCHES -->
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-xl-9">
+            <!-- Cases Item -->
+            <div class="con_CaseItem d-flex justify-content-between align-items-start">
+                <div class="icn_type mr-3 text-center">
+                <img src="images/img/content/icn-supportcases-40x40.svg" />
+                </div>
+                <div class="con_ItemSummary w-100">
+                <a href="javascript:;" target="_parent">
+                    <h5 class="txt_ItemTitle mb-1">${case_title}</h5>
+                </a>
+                <span class="txt_ItemDate date-text mr-3">${date_text_yyyy-mm-dd}</span>
+                <p class="txt_ItemText desc-text mt-1">${desc_text}</p>
+                </div>
+            </div>
+            <!-- /Cases Item -->
+
+            <!-- Cases Item -->
+            <div class="con_CaseItem d-flex justify-content-between align-items-start">
+                <div class="icn_type mr-3 text-center">
+                <img src="images/img/content/icn-supportcases-40x40.svg" />
+                </div>
+                <div class="con_ItemSummary w-100">
+                <a href="javascript:;" target="_parent">
+                    <h5 class="txt_ItemTitle mb-1">Case 180111-000889 - Restore SDR restore SDR restore failed</h5>
+                </a>
+                <span class="txt_ItemDate date-text mr-3">2018-01-12</span>
+                <p class="txt_ItemText desc-text mt-1">Restore SDR restore SDR restore failed</p>
+                </div>
+            </div>
+            <!-- /Cases Item -->
+            <!-- More Results Button -->
+            <div class="text-right mt-5">
+                <!--
+                ***********************************************************************************************************************
+                DEVS: Program the button as needed.
+                ***********************************************************************************************************************
+                -->
+                <button type="button" name="btn_ShowMore" class="btn btn-secondary">More results</button>
+            </div>
+            <!-- /More Results Button -->
+            </div>
+        </div>
+
+        </div>
+        <div class="tab-pane fade" id="panel5a" role="tabpanel">
+        <!-- Results Count/Sort -->
+        <!--
+        ***********************************************************************************************************************
+            DEVS: Make sure the "Browse" versus "Search" context is maintained for the filter.
+                Functionality will remain as it is currently implemented.
+        ***********************************************************************************************************************
+        -->
+        <div class="text-right mb-3 d-flex justify-content-end align-items-center">
+            <span id="search-result-count" class="results-counter mr-2">${count} results sorted by</span>
+            <select id="sort_filter" class="mdb-select" data-stop-refresh="true">
+            <option value="1" selected>Trending</option>
+            <option value="2">Last published</option>
+            </select>
+        </div>
+        <!-- /Results Count/Sort -->
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-5 col-xl-3">
+            <div class="section_Facets mb-3 mb-sm-5">
+                <!-- ETRACKS FACETS -->
+                <div id="con_FacetsEtracks">
+                <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                </div>
+                <!-- /ETRACKS FACETS -->
+            </div>
+            <!-- RELATED SEARCHES -->
+            <!--
+            ***********************************************************************************************************************
+                DEVS: Display related searches if the search keyword is NOT "*" or null. Otherwise hide it.
+            ***********************************************************************************************************************
+            -->
+            <div class="con_RelatedSearches mb-5">
+                <div class="section-title">Related searches</div>
+                <ul>
+                <li><a href="javascript:void(0)" data-related-search="Backup and Restore User Guide Netbackup"><span>Backup and Restore User Guide Netbackup</span></a></li>
+                <li><a href="javascript:void(0)" data-related-search="vmware restore"><span>vmware restore</span></a></li>
+                </ul>
+            </div>
+            <!-- RELATED SEARCHES -->
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-xl-9">
+            <!-- Etracks Item -->
+            <div class="con_EtracksItem d-flex justify-content-between align-items-start">
+                <div class="icn_type mr-3 text-center">
+                <img src="images/img/content/icn-etracks-40x40.svg" />
+                </div>
+                <div class="con_ItemSummary w-100">
+                <a href="javascript:;" target="_parent">
+                    <h5 class="txt_ItemTitle mb-1">${incident_title}</h5>
+                </a>
+                <span class="txt_ItemDate date-text mr-3">${date_text_yyyy-mm-dd}</span>
+                <p class="txt_ItemText desc-text mt-1">${desc_text}</p>
+                </div>
+            </div>
+            <!-- /Etracks Item -->
+
+            <!-- Etracks Item -->
+            <div class="con_EtracksItem d-flex justify-content-between align-items-start">
+                <div class="icn_type mr-3 text-center">
+                <img src="images/img/content/icn-etracks-40x40.svg" />
+                </div>
+                <div class="con_ItemSummary w-100">
+                <a href="javascript:;" target="_parent">
+                    <h5 class="txt_ItemTitle mb-1">Incident 1022978 - Restore: Restores fail when restoring to a RAWS computer</h5>
+                </a>
+                <span class="txt_ItemDate date-text mr-3">2007-04-17</span>
+                <p class="txt_ItemText desc-text mt-1">Restores fail when restoring to a RAWS computer Steps 1 Create and run a backup job of a RAWS directory 2 Delete the source directory from the RAWS computer 3 Create and run ...</p>
+                </div>
+            </div>
+            <!-- /Etracks Item -->
+            <!-- More Results Button -->
+            <div class="text-right mt-5">
+                <!--
+                ***********************************************************************************************************************
+                DEVS: Program the button as needed.
+                ***********************************************************************************************************************
+                -->
+                <button type="button" name="btn_ShowMore" class="btn btn-secondary">More results</button>
+            </div>
+            <!-- /More Results Button -->
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- Classic tabs -->
+</div>
+</div>

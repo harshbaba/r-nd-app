@@ -1,0 +1,195 @@
+.layout-contact-customer{
+    float: left;
+    width: 100%;
+}
+.conatct-service-container{
+    width: 96%;
+    margin: 0 auto;
+    max-width: 760px;
+}
+.contact-customer-main{
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+.contact-customer-head{
+    float: left;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 20px 0 15px;
+}
+.contact-customer-head > h3{
+    font-size: 20px;
+    color: #000;
+}
+.contact-customer-form{
+    float: left;
+    width: 100%;
+}
+
+.contact-form-list{
+    float: left;
+    width: 100%;
+}
+
+.contact-form-list > li{
+    float: left;
+    width: 100%;
+}
+
+.contact-form-list > li > .form-list-ind{
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+
+.contact-form-list > li > .form-list-ind .form-field-ind > label{
+    display: block;
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.contact-form-list > li > .form-list-ind .form-field-ind{
+    float: left;
+    box-sizing: border-box;
+}
+.contact-form-list > li > .form-list-ind .form-field-ind.wid50{
+    width: 50%;
+}
+.contact-form-list > li > .form-list-ind .form-field-ind.wid100{
+    width: 100%;
+}
+.contact-form-list > li > .form-list-ind .form-field-ind.wid50:nth-child(1){
+    padding-right: 15px;
+}
+
+.contact-form-list > li > .form-list-ind .form-field-ind.wid50:nth-child(2){
+    padding-left: 15px;
+}
+
+.contact-form-list > li > .form-list-ind .form-field-ind input[type="text"]{
+    float: left;
+    width: 100%;
+    border: 1px solid #000;
+    color: #000;
+    line-height: 30px;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 3px 10px;
+}
+
+.contact-form-list > li > .form-list-ind .form-field-ind textarea{
+    float: left;
+    width: 100%;
+    border: 1px solid #000;
+    color: #000;
+    line-height: 40px;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+}
+
+.form-bottom-box{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.form-bottom-box input[type="button"],.form-bottom-box input[type="submit"]{
+    background: #767676;
+    border: 0;
+    color: #ffffff;
+    padding: 3px 25px;
+    cursor: pointer;
+    line-height: 27px;
+    display: inline-block;
+    margin:10px;
+}
+
+.contact-customer-desc{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-customer-desc > p{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.layout-contact-email{
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.success-custom-model{
+    position: fixed;
+    max-height: 200px;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    max-width: 600px;
+    background: #fff;
+    width: 96%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: none;
+}
+
+.success-popup-inner{
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.close-success-popup {
+    position: absolute;
+    top: -15px;
+    right: -12px;
+    font-size: 25px;
+    line-height: 24px;
+    color: #222222;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.success-popup-inner > h4{
+    margin-top: 10px;
+}
+.success-popup-inner > p{
+    font-size: 15px;
+    line-height: 22px;
+    margin: 15px 0 20px;
+}
+.success-popup-inner .return-btn-wrap{
+    float: left;
+    width: 100%;
+}
+
+.success-popup-inner .return-btn-wrap > a{
+    background: #b20838;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 15px;
+    line-height: 35px;
+}
+
+
+

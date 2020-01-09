@@ -1,0 +1,18 @@
+.order-notifications-data-table .table-col.notifications-date{
+    width: 18%
+}
+.order-notifications-data-table .table-col.notifications-shipto{
+    width: 26%;
+} 
+.order-notifications-data-table .table-col.notifications-alert{
+    width: 16%;
+} 
+.order-notifications-data-table .table-col.notifications-order-no{
+    width: 14%
+}
+.order-notifications-data-table .table-col.notifications-customer-po{
+    width: 14%
+}
+.order-notifications-data-table .table-col.notifications-details{
+    width: 12%
+}

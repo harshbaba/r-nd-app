@@ -1,0 +1,105 @@
+.open-orders-table .item-level-meritor-part{
+    width: 9%;
+} 
+.open-orders-table .item-level-shipto{
+    width: 12%;
+} 
+
+.open-orders-table .item-level-order-no{
+    width: 11%
+}
+
+.open-orders-table .item-level-customer-po{
+    width: 10%
+}
+.open-orders-table .item-level-order-type{
+    width: 10%;
+} 
+
+.open-orders-table .item-level-qty-ordered{
+    width: 6%
+}
+
+.open-orders-table .item-level-line-qty{
+    width: 6%
+}
+
+.open-orders-table .item-level-promise-date{
+    width: 15%
+}
+
+.open-orders-table .item-level-revised-promise-date{
+    width: 15%
+}
+
+.open-orders-table .item-level-status{
+    width: 6%
+}
+
+.table-header-ind .table-col.item-level-promise-date  .date-box-wrapper{
+    top: 79px;
+}
+
+.table-header-ind .table-col.item-level-revised-promise-date .date-box-wrapper{
+    top: 79px;
+    left: -300px;
+}
+
+
+
+
+
+/*order level css*/
+.open-orders-table .order-level-shipto{
+    width: 26%
+}
+
+.open-orders-table .order-level-date-ordered{
+    width: 19%
+}
+.open-orders-table .order-level-order-no{
+    width: 16%;
+} 
+
+.open-orders-table .order-level-customer-po{
+    width: 13%;
+}
+
+.open-orders-table .order-level-order-type{
+    width: 12%;
+}
+.open-orders-table .order-level-view-details{
+    width: 14%;
+}
+
+.itemLevel .table-header-ind .table-col > h3 {
+	font-size: 13px;	
+}
+
+/* Modal Content */
+#myModal .modal-content{
+background-color: transparent;
+border:0;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

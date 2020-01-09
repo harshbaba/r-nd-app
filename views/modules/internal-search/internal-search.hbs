@@ -1,0 +1,41 @@
+<!-- Search Bar -->
+<div id="section_SearchBar" class="row">
+    <div class="col-12">
+    <div class="card">
+        <div class="card-body d-flex align-items-top w-100 border">
+        <div class="md-form w-100 m-0">
+            <!--
+            ***********************************************************************************************************************
+            DEVS: Search form must submite by clicking the "btn_Search" icon or by pressing ENTER.
+            ***********************************************************************************************************************
+            -->
+            <form id=form_Search action="javascript:;" class="d-flex align-items-top">
+            <input id="keyword" name="keyword" type="text" class="form-control mr-3" data-available-content-types="osc_support_internal,document,dw,etrack" data-locale-value="en_US" autocomplete="off" placeholder=" " /><i id="btn_ClearSearch" class="mdi mdi-close-circle pointer mr-3 mt-2" data-toggle="tooltip" data-placement="top" title="Clear search"></i>
+            <span id="btn_Search" class="mdi mdi-magnify mdi-36px m-0 mt-1 pointer" data-toggle="tooltip" data-placement="top" title="Search"></span>
+            </form>
+            <!--
+            ***********************************************************************************************************************
+            DEVS: Display the SPAN below if there is a search error. Otherwise hide it.
+                    Write the error message to the SPAN's html attribute using the jQuery function "showMsgSearchError(msg)".
+                    (msg) = The message text to be displayed.
+            ***********************************************************************************************************************
+            -->
+            <small id="con_SearchError" class="error text-muted">An error has occurred.</small>
+            <!--
+            ***********************************************************************************************************************
+            DEVS: Write the context message to the below SPAN's html attribute.
+                    EXAMPLE: $('#con_SearchHelp').html("Help text goes here.");
+            ***********************************************************************************************************************
+            -->
+            <small id="con_SearchHelp" class="text-muted">Search all content ...</small>
+        </div>
+        <div id="con_NewArticle">
+            <button id="btn_NewArticle" class="btn btn-primary w-nowrap m-0">New article</button>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div id="search-page-placeholder" class="pl-3 pr-3 mb-5">
+
+</div>

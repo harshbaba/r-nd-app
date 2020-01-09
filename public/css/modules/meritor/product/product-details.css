@@ -1,0 +1,29 @@
+.product-details-layout{
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin-top: 15px;
+}
+.product-details-inner{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.product-details-pic{
+    float: left;
+    width: 100%;
+}
+
+.product-details-pic img{
+    display: inline-block;
+}
+
+.product-details-desc{
+    float: left;
+    width: 100%;
+}
+.product-details-desc p{
+    font-size: 16px;
+    line-height: 24px;
+}

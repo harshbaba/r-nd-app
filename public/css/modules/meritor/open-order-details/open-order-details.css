@@ -1,0 +1,39 @@
+.open-order-details-table .meritor-part{
+    width: 12%;
+} 
+
+.open-order-details-table .customer-po{
+    width: 13%
+}
+.open-order-details-table .request-date{
+    width: 16%;
+} 
+
+.open-order-details-table .qty-ordered{
+    width: 6%
+}
+
+.open-order-details-table .line-qty{
+    width: 6%
+}
+
+.open-order-details-table .promise-date{
+    width: 16%
+}
+
+.open-order-details-table .revised-promise-date{
+    width: 16%
+}
+
+.open-order-details-table .status{
+    width: 14%
+}
+
+.table-header-ind .table-col.promise-date  .date-box-wrapper{
+    top: 79px;
+}
+
+.table-header-ind .table-col.revised-promise-date .date-box-wrapper{
+    top: 79px;
+    left: -300px;
+}

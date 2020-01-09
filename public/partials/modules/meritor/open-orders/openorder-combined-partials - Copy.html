@@ -1,0 +1,263 @@
+<script id="tableWrapper" type="text/x-handlebars-template">
+    <div class="table-top-bar">
+        <div class="top-bar-left">
+            <h3>{{this.headerTitle}}</h3>
+            <h5>{{this.subTitle}}</h5>
+        </div>
+        <div class="top-bar-right">
+            <div class="clear-search-wrap">
+                <button class="clear-search-button">Clear Filter</button>
+            </div>
+            <div class="clear-search-wrap">
+                <button class="advance-search-button">{{this.advanceSearchTxt}}</button>
+                <img id="processingAdvSrch" style="display:none;" src="{{this.loadingImgPath}}loading.gif" width="44" height="44" border="0"/>
+            </div>
+            <div class="clear-search-wrap">
+                <button class="previous-button">Return to My Orders</button>
+            </div>
+            <div class="table-pagination-wrap"></div>
+        </div>
+    </div>
+    <div class="overflow-wrapper">
+        <div class="data-table-inner {{this.tableClass}}" id="{{this.tableId}}">
+            <div id="table-header" class="data-table-header"></div>
+            <div id="table-list-wrapper"></div>
+        </div>
+    </div>
+    <div class="table-footer">
+        <div class="table-pagination-wrap"></div>
+    </div>
+</script>
+
+<script id="tableHeader" type="text/x-handlebars-template">
+    <div class="table-header-ind">
+        {{#each this.headerConfig as |headerInd|}}
+        <div class="table-col {{headerInd.className}} {{#ifEq ../this.currentSortKey headerInd.keyName}}{{../../this.currentSortType}}{{/ifEq}}" data-colKeyName="{{headerInd.keyName}}">
+            {{#if headerInd.sorting}}
+            <h3 class="sorting-title" data-appliedSorting="{{#ifEq ../../this.currentSortKey headerInd.keyName}}{{../../../this.currentSortType}}{{/ifEq}}">
+                <span class="title">{{{headerInd.title}}}</span>
+                <span class="sorting-control"></span>
+            </h3>
+            {{else}}
+               <h3><span class="title">{{{headerInd.title}}}</span></h3>
+            {{/if}}
+            {{#ifEq headerInd.operationType "search"}}
+                <span class="search-icon"><i class="fa fa-search"></i></span>
+                <div class="search-box-ind">
+                    <input type="text" data-searchKey="{{headerInd.keyName}}" placeholder="Filter Results"/>
+                </div>
+            {{/ifEq}}
+
+            {{#ifEq headerInd.operationType "showList"}}
+                <span class="list-icon" data-colKey="{{headerInd.keyName}}" data-listBoxId="showListWrapper{{headerInd.keyName}}"><i class="fa fa-list"></i></span>
+                <div class="list-box-wrapper" id="showListWrapper{{headerInd.keyName}}"></div>
+                <div class="selected-options-text">{{#if headerInd.showTextInitially}} {{initialSelectedText headerInd.keyName}} {{/if}}</div>
+            {{/ifEq}}
+
+            {{#ifEq headerInd.operationType "fromToDate"}}
+                <span class="date-icon" data-colKey="{{headerInd.keyName}}" data-dateboxid="datebox{{headerInd.keyName}}"><i class="fa fa-calendar"></i></span>
+                <div class="date-box-wrapper" id="datebox{{headerInd.keyName}}">
+                    <a href="#" class="close-date-picker" data-dateboxid="datebox{{headerInd.keyName}}"><i class="fa fa-times"></i></a>
+                    <div class="calender-wrapper">
+                        <div id="from-date-calender{{headerInd.keyName}}" data-keyName="{{headerInd.keyName}}" class="datepicker-here from-to-calender" data-language='en'></div>
+                        <div id="to-date-calender{{headerInd.keyName}}" data-keyName="{{headerInd.keyName}}" class="datepicker-here from-to-calender" data-language='en'></div>
+                    </div>
+
+                    <div class="calender-bottom">
+                        {{#if ../../this.isExpandDateButton}}
+                            <button type="button" class="date-advance-search-btn">Expand Date Range</button>
+                        {{/if}}
+                        <button type="button" class="date-submit-btn" data-keyName="{{headerInd.keyName}}">Filter</button>
+                    </div>
+                </div>
+                <div class="fromto-dates-text" id="dates-text{{headerInd.keyName}}"></div>
+            {{/ifEq}}
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<script id="tableList" type="text/x-handlebars-template">
+    {{#if this.data}}
+    <ul id="table-list" class="data-table-list">
+        {{#ifEq this.tabLevel "orderLevel"}}
+            {{#each this.data as |returnInd|}}
+                <li>
+                    <div class="table-list-ind">
+                        <div class="table-col order-level-shipto">
+                            <p>{{{returnInd.SHIP_TO}}}</p>
+                        </div>
+                        <div class="table-col order-level-date-ordered">
+                            <p>{{formattedDate returnInd.ORD_DT}}</p>
+                        </div>
+                        <div class="table-col order-level-order-no">
+                            <p>{{returnInd.ORDNUM}}</p>
+                        </div>
+                        <div class="table-col order-level-customer-po">
+                            <p>{{returnInd.CUST_PO}}</p>
+                        </div>
+                        <div class="table-col order-level-order-type">
+                            <p>{{returnInd.ORD_TYPE}}</p>
+                        </div>
+                        <div class="table-col order-level-view-details">
+                            <p><a href="{{../this.pdfUrl}}{{returnInd.ORDNUM}}">View Details</a></p>
+                         </div>
+                    </div>
+                </li>
+            {{/each}}
+        {{/ifEq}}
+
+        {{#ifEq this.tabLevel "itemLevel"}}
+            {{#each this.data as |returnInd|}}
+                <li>
+                    <div class="table-list-ind">
+                        <div class="table-col item-level-meritor-part">
+                            <p>{{returnInd.MTOR_PART}}</p>
+                        </div>
+                        <div class="table-col item-level-shipto">
+                            <p>{{returnInd.SHIP_TO}}</p>
+                        </div>
+                        <div class="table-col item-level-order-no">
+                            <p>{{returnInd.ORDNUM}}</p>
+                        </div>
+                        <div class="table-col item-level-customer-po">
+                            <p>{{returnInd.CUST_PO}}</p>
+                        </div>
+                        <div class="table-col item-level-order-type">
+                            <p>{{returnInd.ORD_TYPE}}</p>
+                        </div>
+                        <div class="table-col item-level-qty-ordered">
+                            <p>{{returnInd.ORD_QTY}}</p>
+                        </div>
+                        <div class="table-col item-level-line-qty">
+                            <p>{{returnInd.DTL_QTY}}</p>
+                        </div>
+                        <div class="table-col item-level-promise-date">
+                            <p>{{formattedDate returnInd.ORD_DT}}</p>
+                        </div>
+                        <div class="table-col item-level-revised-promise-date">
+                            <p>{{formattedDate returnInd.REV_PROM_DT}}</p>
+                        </div>
+                        <div class="table-col item-level-status">
+                            <p><a href="#" class="status-popup-btn" popup-details='{"shipFrom": "{{returnInd.SHIP_FROM}}", "customerRequestDate": "{{returnInd.REQ_DT}}", "additionalComments":"{{returnInd.ADD_COMMENT}}", "processDate":"{{returnInd.PROCESS_DT}}", "status":"{{returnInd.DTL_STATUS}}"}'>{{returnInd.DTL_STATUS}} <br/>Details</a></p>
+                        </div>
+                    </div>
+                </li>
+            {{/each}}
+        {{/ifEq}}
+        
+    </ul>
+    {{else}}
+        <div class="no-data-found"><h3>No Data Found</h3></div>
+    {{/if}}
+</script>
+
+<script id="columnList" type="text/x-handlebars-template">
+    <ul class="list">
+        {{#each this.columnListArr as |listInd|}}
+            {{#isEmpty listInd ""}}
+            <li>
+                <div class="list-ind" data-id="{{listInd}}">
+                    <input type="checkbox" id="shiplist{{@index}}" value="{{listInd}}" data-shipCode="" {{{checkIsSelected listInd ../../this.selectedCodes}}}>
+                    <label for="shiplist{{@index}}">{{{listInd}}}</label>
+                </div>
+            </li>
+            {{/isEmpty}}
+        {{/each}}
+    </ul>
+    <div class="filter-btn-row">
+        <button type="button" class="options-clearall-btn">Clear All</button>
+        <button type="button" class="options-filter-btn">Filter</button>
+    </div>
+</script>
+
+<script id="tablePagination" type="text/x-handlebars-template">
+    <ul class="pagination-list">
+        {{#if this.willShowPrevButton}}
+        <li><span class="prev-next-btn prev-btn"><i class="fa fa-angle-left"></i></span></li>
+        {{/if}}
+        {{#each this.pageList as |pageListInd| }}
+        {{#ifEq pageListInd "..."}}
+            <li class="blank">{{pageListInd}}</li>
+            {{else}}
+            <li class="{{#ifEq pageListInd ../../this.currentPageId}}active{{/ifEq}}"><span class="page-id-btn" data-pageId="{{pageListInd}}">{{pageListInd}}</span></li>
+        {{/ifEq}}
+        {{/each}}
+        {{#if this.willShowNextButton}}
+       <li><span class="prev-next-btn next-btn"><i class="fa fa-angle-right"></i></span></li>
+        {{/if}}
+    </ul>
+</script>
+
+<script id="tableStatusPopup" type="text/x-handlebars-template">
+    <div class="status-popup-inner">
+        <a href="#" class="close-status-popup" tabindex="0" id="close-status-popup-btn">
+            <i class="fa fa-close" aria-hidden="true"></i>
+        </a>
+        <div class="status-title-box">
+            <h4>Line Item Status</h4>
+        </div>
+        <div class="status-head">
+            {{#ifEq ./this.details.status 'Open'}}
+            <img src="{{this.imageUrl}}open-order-open-status.png" alt="" />
+            {{/ifEq}}
+            {{#ifEq ./this.details.status 'In Process'}}
+            <img src="{{this.imageUrl}}open-order-inprocess-status.png" alt="" />
+            {{/ifEq}}
+            <!-- <div class="status-list-box">
+                <div class="status-head-bar">
+                        &nbsp;
+                </div>
+                <ul class="status-list">
+                    <li>
+                        <div class="status-list-ind {{#ifEq ./this.details.status 'Open'}} active {{/ifEq}}">
+                            <p>Open</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="status-list-ind {{#ifEq ./this.details.status 'In Process'}} active {{/ifEq}}">
+                            <p>In Process</p>
+                        </div>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+
+        <div class="status-desc-box">
+            {{#ifEq ./this.details.status 'Open'}}
+            <ul class="status-desc-list">
+                <li>
+                    <div class="status-desc-ind">
+                        <p><label>Ship From: </label>{{./this.details.shipFrom}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="status-desc-ind">
+                        <p><label>Customer Request Date: </label>{{formattedDate ./this.details.customerRequestDate}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="status-desc-ind">
+                        <p><label>Additional Comments: </label>{{./this.details.additionalComments}}</p>
+                    </div>
+                </li>
+            </ul>
+            {{/ifEq}}
+
+            {{#ifEq ./this.details.status 'In Process'}}
+                <ul class="status-desc-list">
+                    <li>
+                        <div class="status-desc-ind">
+                            <p><label>Process Date: </label>{{formattedDate ./this.details.processDate}}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="status-desc-ind">
+                            <p><label>Ship From: </label>{{./this.details.shipFrom}}</p>
+                        </div>
+                    </li>
+                </ul>
+            {{/ifEq}}
+        </div>
+    </div>
+</script>

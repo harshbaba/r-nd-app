@@ -1,0 +1,135 @@
+{  
+    
+   "openOrderLevelDetails":[  
+      {  
+         "ORDNUM":"902743021",
+         "DLR_CODE":"",
+         "CUST_PO":"128867",
+         "SHIP_TO":"ANDERSON BROTHERS INC-DD110A",
+         "ORD_DT":"20190513000000",
+         "FRT_CODE":"Prepaid",
+         "ORD_TYPE":"STOCK",
+         "DLR_PO":"",
+         "ORD_STATUS":"Open",
+         "FDS":"252",
+         "SOLD_TO":"DD110A"
+      },
+      {  
+         "ORDNUM":"902740475",
+         "DLR_CODE":"",
+         "CUST_PO":"128840",
+         "SHIP_TO":"ANDERSON BROTHERS INC-DD110A",
+         "ORD_DT":"20190509000000",
+         "FRT_CODE":"Prepaid",
+         "ORD_TYPE":"STOCK",
+         "DLR_PO":"",
+         "ORD_STATUS":"Open",
+         "FDS":"252",
+         "SOLD_TO":"DD110A"
+      },
+      {  
+         "ORDNUM":"902739412",
+         "DLR_CODE":"",
+         "CUST_PO":"128683",
+         "SHIP_TO":"ANDERSON BROTHERS INC-DD110A",
+         "ORD_DT":"20190508000000",
+         "FRT_CODE":"Prepaid",
+         "ORD_TYPE":"STOCK",
+         "DLR_PO":"",
+         "ORD_STATUS":"In Process",
+         "FDS":"252",
+         "SOLD_TO":"DD110A"
+      },
+      {  
+         "ORDNUM":"902737827",
+         "DLR_CODE":"",
+         "CUST_PO":"128732",
+         "SHIP_TO":"ANDERSON BROTHERS INC-DD110A",
+         "ORD_DT":"20190506000000",
+         "FRT_CODE":"Prepaid",
+         "ORD_TYPE":"STOCK",
+         "DLR_PO":"",
+         "ORD_STATUS":"Open",
+         "FDS":"252",
+         "SOLD_TO":"DD110A"
+      },
+      {  
+         "ORDNUM":"902734843",
+         "DLR_CODE":"",
+         "CUST_PO":"128783",
+         "SHIP_TO":"ANDERSON BROTHERS INC-DD110A",
+         "ORD_DT":"20190502000000",
+         "FRT_CODE":"Prepaid",
+         "ORD_TYPE":"STOCK",
+         "DLR_PO":"",
+         "ORD_STATUS":"Open",
+         "FDS":"252",
+         "SOLD_TO":"DD110A"
+      },
+      {  
+         "ORDNUM":"902732041",
+         "DLR_CODE":"",
+         "CUST_PO":"128755",
+         "SHIP_TO":"ANDERSON BROTHERS INC-DD110A",
+         "ORD_DT":"20190429000000",
+         "FRT_CODE":"Prepaid",
+         "ORD_TYPE":"STOCK",
+         "DLR_PO":"",
+         "ORD_STATUS":"Open",
+         "FDS":"252",
+         "SOLD_TO":"DD110A"
+      },
+      {  
+         "ORDNUM":"902721401",
+         "DLR_CODE":"",
+         "CUST_PO":"128652",
+         "SHIP_TO":"ANDERSON BROTHERS INC-DD110A",
+         "ORD_DT":"20190415000000",
+         "FRT_CODE":"Prepaid",
+         "ORD_TYPE":"STOCK",
+         "DLR_PO":"",
+         "ORD_STATUS":"Open",
+         "FDS":"252",
+         "SOLD_TO":"DD110A"
+      },
+      {  
+         "ORDNUM":"902719116",
+         "DLR_CODE":"",
+         "CUST_PO":"128629",
+         "SHIP_TO":"ANDERSON BROTHERS INC-DD110A",
+         "ORD_DT":"20190411000000",
+         "FRT_CODE":"Prepaid",
+         "ORD_TYPE":"STOCK",
+         "DLR_PO":"",
+         "ORD_STATUS":"Open",
+         "FDS":"252",
+         "SOLD_TO":"DD110A"
+      },
+      {  
+         "ORDNUM":"902713259",
+         "DLR_CODE":"",
+         "CUST_PO":"128583",
+         "SHIP_TO":"ANDERSON BROTHERS INC-DD110A",
+         "ORD_DT":"20190404000000",
+         "FRT_CODE":"Prepaid",
+         "ORD_TYPE":"STOCK",
+         "DLR_PO":"",
+         "ORD_STATUS":"Open",
+         "FDS":"252",
+         "SOLD_TO":"DD110A"
+      },
+      {  
+         "ORDNUM":"902689510",
+         "DLR_CODE":"",
+         "CUST_PO":"128365",
+         "SHIP_TO":"ANDERSON BROTHERS INC-DD110A",
+         "ORD_DT":"20190304000000",
+         "FRT_CODE":"Prepaid",
+         "ORD_TYPE":"STOCK",
+         "DLR_PO":"",
+         "ORD_STATUS":"Open",
+         "FDS":"252",
+         "SOLD_TO":"DD110A"
+      }
+   ]
+}

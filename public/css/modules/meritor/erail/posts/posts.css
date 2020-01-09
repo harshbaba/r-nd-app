@@ -1,0 +1,18 @@
+.posts-data-table .table-col.table-col-title{
+    width: 50%;
+} 
+.posts-data-table .table-col.table-col-status{
+    width: 15%;
+} 
+
+.posts-data-table .table-col.table-col-date{
+    width: 15%
+}
+
+.posts-data-table .table-col.table-col-comments-no{
+    width: 8%
+}
+
+.posts-data-table .table-col.table-col-post-id{
+    width: 12%
+}

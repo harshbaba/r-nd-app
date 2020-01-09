@@ -1,0 +1,18 @@
+.invoice-data-table .table-col.table-col-invoice{
+    width: 16%;
+} 
+.invoice-data-table .table-col.table-col-shipto{
+    width: 30%;
+} 
+
+.invoice-data-table .table-col.table-col-date-ordered{
+    width: 18%
+}
+
+.invoice-data-table .table-col.table-col-order-no{
+    width: 20%
+}
+
+.invoice-data-table .table-col.table-col-customer-po{
+    width: 16%
+}

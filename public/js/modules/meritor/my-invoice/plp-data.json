@@ -1,0 +1,144 @@
+{
+	"list":[
+            {
+                "partNumber": "131N4533",
+                "partNumberURL": "https://localhost/webapp/wcs/stores/servlet/ProductDisplay?storeId=11051&urlRequestType=Base&partNumber=131N4533&langId=-1&catalogId=10201",
+                "Brake Type": "----",
+                "BrakeColor": "----",
+                "BrakeMaterial": "----",
+                "BrakeNoise": "----",
+                "BrakeQuality": "----",
+                "BrakeWeight": "----"
+            },
+            {
+                "partNumber": "131N4533",
+                "partNumberURL": "https://localhost/webapp/wcs/stores/servlet/ProductDisplay?storeId=11051&urlRequestType=Base&partNumber=131N4533&langId=-1&catalogId=10201",
+                "Brake Type": "----",
+                "BrakeColor": "----",
+                "BrakeMaterial": "----",
+                "BrakeNoise": "----",
+                "BrakeQuality": "----",
+                "BrakeWeight": "----"
+            },{
+                "partNumber": "131N4533",
+                "partNumberURL": "https://localhost/webapp/wcs/stores/servlet/ProductDisplay?storeId=11051&urlRequestType=Base&partNumber=131N4533&langId=-1&catalogId=10201",
+                "Brake Type": "----",
+                "BrakeColor": "----",
+                "BrakeMaterial": "----",
+                "BrakeNoise": "----",
+                "BrakeQuality": "----",
+                "BrakeWeight": "----"
+                
+            },
+            {
+                "partNumber": "131N4533",
+                "partNumberURL": "https://localhost/webapp/wcs/stores/servlet/ProductDisplay?storeId=11051&urlRequestType=Base&partNumber=131N4533&langId=-1&catalogId=10201",
+                "Brake Type": "----",
+                "BrakeColor": "----",
+                "BrakeMaterial": "----",
+                "BrakeNoise": "----",
+                "BrakeQuality": "----",
+                "BrakeWeight": "----"
+                
+            },
+            {
+                "partNumber": "131N4533",
+                "partNumberURL": "https://localhost/webapp/wcs/stores/servlet/ProductDisplay?storeId=11051&urlRequestType=Base&partNumber=131N4533&langId=-1&catalogId=10201",
+                "Brake Type": "----",
+                "BrakeColor": "----",
+                "BrakeMaterial": "----",
+                "BrakeNoise": "----",
+                "BrakeQuality": "----",
+                "BrakeWeight": "----"
+                
+            },
+            {
+                "partNumber": "131N4533",
+                "partNumberURL": "https://localhost/webapp/wcs/stores/servlet/ProductDisplay?storeId=11051&urlRequestType=Base&partNumber=131N4533&langId=-1&catalogId=10201",
+                "Brake Type": "----",
+                "BrakeColor": "----",
+                "BrakeMaterial": "----",
+                "BrakeNoise": "----",
+                "BrakeQuality": "----",
+                "BrakeWeight": "----"
+                
+            },
+            {
+                "partNumber": "131N4533",
+                "partNumberURL": "https://localhost/webapp/wcs/stores/servlet/ProductDisplay?storeId=11051&urlRequestType=Base&partNumber=131N4533&langId=-1&catalogId=10201",
+                "Brake Type": "----",
+                "BrakeColor": "----",
+                "BrakeMaterial": "----",
+                "BrakeNoise": "----",
+                "BrakeQuality": "----",
+                "BrakeWeight": "----"
+                
+            },
+            {
+                "partNumber": "131N4533",
+                "partNumberURL": "https://localhost/webapp/wcs/stores/servlet/ProductDisplay?storeId=11051&urlRequestType=Base&partNumber=131N4533&langId=-1&catalogId=10201",
+                "Brake Type": "----",
+                "BrakeColor": "----",
+                "BrakeMaterial": "----",
+                "BrakeNoise": "----",
+                "BrakeQuality": "----",
+                "BrakeWeight": "----"
+                
+            },
+            {
+                "partNumber": "131N4533",
+                "partNumberURL": "https://localhost/webapp/wcs/stores/servlet/ProductDisplay?storeId=11051&urlRequestType=Base&partNumber=131N4533&langId=-1&catalogId=10201",
+                "Brake Type": "----",
+                "BrakeColor": "----",
+                "BrakeMaterial": "----",
+                "BrakeNoise": "----",
+                "BrakeQuality": "----",
+                "BrakeWeight": "----"
+                
+            }
+    ],
+    "config":[
+            {
+                "className":"partno",
+                "title":"Meritor Part no",
+                "operationType": "search",
+                "keyName": "partNumber",
+                "sorting": true
+            },
+            {
+                "className":"BrakeColor",
+                "title":"Brake Color",
+                "operationType": "search",
+                "keyName": "BrakeColor",
+                "sorting": true
+            },
+            {
+                "className":"BrakeColor",
+                "title":"Brake Color",
+                "operationType": "search",
+                "keyName": "BrakeColor",
+                "sorting": true
+            },
+            {
+                "className":"BrakeColor",
+                "title":"Brake Color",
+                "operationType": "search",
+                "keyName": "BrakeColor",
+                "sorting": true
+            },
+            {
+                "className":"BrakeColor",
+                "title":"Brake Color",
+                "operationType": "search",
+                "keyName": "BrakeColor",
+                "sorting": true
+            },
+            {
+                "className":"BrakeColor",
+                "title":"Brake Color",
+                "operationType": "search",
+                "keyName": "BrakeColor",
+                "sorting": true
+            }	
+    ]
+}

@@ -1,0 +1,68 @@
+{{#if this.isSideBar}}
+    {{#ifEq this.currentDocType "osc_support_internal"}}
+        <div class="section_Facets mb-3 mb-sm-5">
+            <!-- KNOWLEDGE BASE FACETS -->
+            <div id="con_FacetsKnowledgeBase">
+                <div class="mb-5">
+                    <div class="section-title">Products</div>
+                    <ul>
+                        {{#each this.facet_fields.product_name as |facet|}}
+                            <li><a href="javascript:void(0)" id="1" data-product_name="{{facet.[0]}}"><span>{{facet.[0]}}</span></a><span class="badge badge-pill badge-info">{{facet.[1]}}</span></li>
+                        {{/each}}
+                        <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="mb-5">
+                    <div class="section-title">Article Types</div>
+                    <ul>
+                        {{#each this.facet_fields.ArticleType_s as |facet|}}
+                            <li><a href="javascript:void(0)" id="1" data-product_name="{{facet.[0]}}"><span>{{facet.[0]}}</span></a><span class="badge badge-pill badge-info">{{facet.[1]}}</span></li>
+                        {{/each}}
+                        <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="mb-5">
+                    <div class="section-title">Article Status</div>
+                    <ul>
+                        {{#each this.facet_fields.status_s as |facet|}}
+                            <li><a href="javascript:void(0)" id="1" data-product_name="{{facet.[0]}}"><span>{{facet.[0]}}</span></a><span class="badge badge-pill badge-info">{{facet.[1]}}</span></li>
+                        {{/each}}
+                        <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /KNOWLEDGE BASE FACETS -->
+        </div>
+    {{/ifEq}}
+
+    {{#ifEq this.currentDocType "documentation"}}
+        <div class="section_Facets mb-3 mb-sm-5">
+            <!-- DOCUMENTATION FACETS -->
+            <div id="con_FacetsDocumentation">
+                <div class="mb-5">
+                    <div class="section-title">Products</div>
+                    <ul>
+                        {{#each this.facet_fields.product_name as |facet|}}
+                            <li><a href="javascript:void(0)" id="1" data-product_name="{{facet.[0]}}"><span>{{facet.[0]}}</span></a><span class="badge badge-pill badge-info">{{facet.[1]}}</span></li>
+                        {{/each}}
+                        <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="mb-5">
+                    <div class="section-title">Article Types</div>
+                    <ul>
+                        {{#each this.facet_fields.category as |facet|}}
+                            <li><a href="javascript:void(0)" id="1" data-product_name="{{facet.[0]}}"><span>{{facet.[0]}}</span></a><span class="badge badge-pill badge-info">{{facet.[1]}}</span></li>
+                        {{/each}}
+                        <li class="all-content-li"><a href="javascript:void(0)" id="allContent"><span class="all-content-label" style="position: relative;"><i class="mdi mdi-arrow-left-drop-circle mr-2"></i></span><span>Show all</span></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- /DOCUMENTATION FACETS -->
+        </div>    
+    {{/ifEq}}
+{{/if}}

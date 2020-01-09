@@ -1,0 +1,29 @@
+<div class="check-list-inner">
+    <a href="#" class="close-checklist-popup" tabindex="0" id="close-checklist-popup-btn">
+        <i class="fa fa-close" aria-hidden="true"></i>
+    </a>
+    <h4 style="font-size: 18px; font-weight: bold">Information is available for up to 5 ship to codes</h4>
+    <div class="inline-error-box">
+        <p></p>
+    </div>
+    <div class="check-list-main">
+        <div class="check-list-box">
+            <ul class="check-list">
+                {{#each this as |checkListInd|}}
+                <li>
+                    <div class="check-list-ind">
+                        <input type="checkbox" id="{{@key}}" value="{{checkListInd}}" />
+                        <label for="mylabel{{@index}}">{{@key}}-{{{checkListInd}}}</label>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="warning-wrap">
+             <p>*Use Advanced Search to view other ship to code information.</p>
+        </div>
+        <div class="list-submit-box">
+            <button type="submit" id="submit-list" class="submit-checklist-btn">Go</button>
+        </div>
+    </div>
+</div>

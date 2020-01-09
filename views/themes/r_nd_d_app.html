@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="aui">
+	<head>
+	{{>header this.headerData}}
+	{{>cssInclude this.cssList}}
+	</head>
+	<body>
+		<!--[if IE]>
+			<div class="unsupported-browser"><h1>Browser not supported please upgrade</h1></div>
+		<![endif]-->
+
+		<!--[if !IE]> -->
+		<div class="layout-header">
+			<div class="container-fluid">
+				<div class="row header-main">
+					<div class="menu-box">
+						<a href="#" class="menu-icon toggle-icon" id="main-menu-icon" tabindex="0" data-toggle="menu-list-box" aria-label="Open Main Menu" target-focusid="first-main-menu-link">
+							<span class="line first-line"></span>
+							<span class="line second-line"></span>
+							<span class="line third-line"></span>
+						</a>
+						<div class="menu-list-box toggle-box">
+							<ul class="menu-list">
+								<li class="active"><a href="/" id="first-main-menu-link" tabindex="0">Home</a></li>
+								<li><a href="../aboutus" tabindex="0">About</a></li>
+								<li><a href="../projects" tabindex="0">Projects</a></li>
+								<li>
+									<a href="#" tabindex="0">Meritor</a>
+									<ul>
+										<li><a href="../meritor/my-invoice" tabindex="0">Invoice</a></li>
+										<li><a href="../meritor/return" tabindex="0">Return</a></li>
+										<li><a href="../meritor/return-history" tabindex="0">Return History</a></li>
+										<li><a href="../meritor/orders-history" tabindex="0">Orders History</a></li>
+										<li><a href="../meritor/open-orders" tabindex="0">Open Orders</a></li>
+										<li><a href="../meritor/plp-view" tabindex="0">PLP View</a></li>
+										<li><a href="../meritor/order-details" tabindex="0">Order Details</a></li>
+										<li><a href="../meritor/open-order-details" tabindex="0">Open Order Details</a></li>
+										<li><a href="../meritor/notifications-settings" tabindex="0">Notifications Settings</a></li>
+										<li><a href="../meritor/checklist" tabindex="0">Check List</a></li>
+										<li><a href="../meritor/box" tabindex="0">Box</a></li>
+										<li><a href="../meritor/box2" tabindex="0">Box2</a></li>
+										<li><a href="../meritor/product-details" tabindex="0">Product Details</a></li>
+										
+									</ul>
+								</li>
+								<li><a href="../products" tabindex="0">Products</a></li>
+								<li><a href="../magnifier-glass" tabindex="0">Magnifier Glass</a></li>
+								<li><a href="../form-changes" tabindex="0" forwordjumpbyid="main-menu-icon">Form Changes</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="site-logo">
+						<a href="#" tabindex="-1">R&D App</a>
+					</div>
+
+					<div class="header-right">
+						<div class="site-search-box">
+							<a href="#" class="search-icon toggle-icon" id="search-icon" data-toggle="search-box" tabindex="0" aria-label="Open Search Bar">
+								<i class="fa fa-search"></i>
+							</a>
+							<div class="search-box toggle-box">
+								<div class="search-box-header">
+									<h3> Search</h3>
+								</div>
+							</div>
+						</div>
+						<div class="mini-cart-box">
+							<a href="#" class="cart-icon toggle-icon" id="cart-icon" data-toggle="cart-list-box" tabindex="0" aria-label="Open Mini Cart">
+								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+							</a>
+							<div class="cart-list-box toggle-box">
+								<div class="cart-list-header">
+									<h3>Mini Cart</h3>
+								</div>
+								<ul class="cart-list">
+									<li>
+										<div class="cart-list-ind"></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="user-account-box">
+							<a href="#" class="user-account-icon toggle-icon" id="user-account-icon" data-toggle="user-account" tabindex="0" aria-label="Open User Account">
+								<i class="fa fa-user-circle"></i>
+							</a>
+							<div class="user-account toggle-box">
+								<div class="user-account-header">
+									<h3>User Account</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">    
+  			<div class="row content">
+				  {{{body}}}
+			</div>
+		</div>
+		<footer class="container-fluid text-center">
+			<ul class="footer-links">
+				<li><a href="https://enquiryrailway.in/" target="_blank" tabindex="0" aria-label="EnquiryRailway.in">Enquiry Railway.in</a></li>
+				<li><a href="https://quick-splitapp.firebaseapp.com" target="_blank" tabindex="0" aria-label="Quick Split App">Quick SplitApp</a></li>
+				<li><a href="https://r-nd-d-app.herokuapp.com/" target="_blank" tabindex="0" aria-label="R & D App">R&amp;D App</a></li>
+				<li><a href="#" class="contact-us-link" id="contact-us-btn-link" tabindex="0" aria-label="Open Contact Us Form">Contact Us</a></li>
+				<li><a href="https://enquiryrailway.in/aboutus" target="_blank" tabindex="0" aria-label="About Us">About Us</a></li>
+			</ul>
+
+			<ul class="social-links">
+				<li><a href="#" title="Find us on GitHub" tabindex="-1"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+				<li><a href="#" title="Find us on JSFiddle" tabindex="-1"><i class="fa fa-jsfiddle" aria-hidden="true"></i></a></li>
+				<li><a href="#" title="Connect wit us" tabindex="-1"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				<li><a href="#" title="Read us on Medium" tabindex="-1"><i class="fa fa-medium" aria-hidden="true"></i></a></li>
+				<li><a href="#" title="Meet with professionals" tabindex="-1"><i class="fa fa-meetup" aria-hidden="true"></i></a></li>
+				<li><a href="#" title="Play With us on StackOverFlow" tabindex="-1"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a></li>
+			</ul>
+		</footer>
+		<div class="page-bg"></div>
+		<div class="page-loader">
+			<div class="loader-bg"></div>
+			<span class="loader">
+			</span>
+		</div>
+		<div class="custom-model"></div>
+		{{>jsInclude this.jsList}}
+		<!-- <![endif]-->
+
+	</body>
+</html>

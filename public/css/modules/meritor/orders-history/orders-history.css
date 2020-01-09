@@ -1,0 +1,66 @@
+.orders-history-data-table .item-level-meritor-part{
+    width: 11%;
+} 
+.orders-history-data-table .item-level-shipto{
+    width: 15%;
+} 
+
+.orders-history-data-table .item-level-date-ordered{
+    width: 17%
+}
+
+.orders-history-data-table .item-level-order-no{
+    width: 11%
+}
+
+.orders-history-data-table .item-level-customer-po{
+    width: 11%
+}
+.orders-history-data-table .item-level-order-type{
+    width: 11%;
+} 
+
+.orders-history-data-table .item-level-qty-ordered{
+    width: 5%
+}
+
+.orders-history-data-table .item-level-line-qty{
+    width: 5%
+}
+
+.orders-history-data-table .item-level-status{
+    width: 13%
+}
+
+
+/*order level css*/
+.orders-history-data-table .order-level-shipto{
+    width: 22%
+}
+
+.orders-history-data-table .order-level-date-ordered{
+    width: 16%
+}
+.orders-history-data-table .order-level-order-no{
+    width: 15%;
+} 
+
+.orders-history-data-table .order-level-customer-po{
+    width: 12%
+}
+
+.orders-history-data-table .order-level-order-status{
+    width: 12%
+}
+
+.orders-history-data-table .order-level-order-type{
+    width: 12%
+}
+.orders-history-data-table .order-level-view-details{
+    width: 11%
+}
+
+.orders-history-data-table .data-table-list > li.child .table-col.item-level-qty-ordered > p{
+    visibility: hidden;
+}
+

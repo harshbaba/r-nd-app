@@ -1,0 +1,30 @@
+{{#if this.twoColumn}}
+<div class="search-sidebar">
+    <div class="search-sidebar-inner">
+        <div class="search-sidebar-head">
+            <h3>Search By</h3>
+        </div>
+        <div class="sidebar-list-box">
+            <ul class="sidebar-list">
+                {{#each this.products.navigation as |nav|}}
+                <li>
+                    <div class="search-by-title">
+                        <h3>{{nav.attributeName}}</h3>
+                    </div>
+                    <ul class="attribute-list" attributeKey="{{nav.attributeName}}">
+                        {{#each nav.attributes as |navAttr|}}
+                        <li class="{{#if navAttr.isActive}} active {{/if}}" attributeValue="{{navAttr.attrName}}">{{navAttr.attrName}}</li>
+                        {{/each}}
+                    </ul>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+{{/if}}
+<div class="search-list-main {{#if this.twoColumn}}two-column {{else}}one-column{{/if}}">
+    <ul class="products-search-list">
+        
+    </ul>
+</div>

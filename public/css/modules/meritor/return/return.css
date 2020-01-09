@@ -1,0 +1,18 @@
+.return-data-table .table-col.table-col-shipto{
+    width: 30%;
+} 
+
+.return-data-table .table-col.table-col-date-ordered{
+    width: 18%
+}
+
+.return-data-table .table-col.table-col-order-no{
+    width: 20%
+}
+
+.return-data-table .table-col.table-col-customer-po{
+    width: 16%
+}
+.return-data-table .table-col.table-col-view-details{
+    width: 16%;
+} 

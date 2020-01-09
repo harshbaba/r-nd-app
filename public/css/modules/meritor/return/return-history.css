@@ -1,0 +1,39 @@
+
+
+.return-history-table .table-col.table-col-return-number{
+    width: 14%;
+}
+.return-history-table .table-col.table-col-shipto{
+    width: 22%;
+} 
+
+.return-history-table .table-col.table-col-date-requested{
+    width: 14%
+}
+
+
+.return-history-table .table-col.table-col-reference-number{
+    width: 16%;
+}
+.return-history-table .table-col.table-col-type{
+    width: 9%;
+}
+
+.return-history-table .table-col.table-col-status{
+    width: 9%;
+}
+.return-history-table .table-col.table-col-credit-note{
+    width: 15%;
+} 
+
+.table-header-ind .table-col .list-box-wrapper .filter-btn-row button {
+    background: #767676;
+    border: 0;
+    color: #ffffff;
+    padding: 3px 7px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+}
+
+.modal-content{width: 45% !important;}

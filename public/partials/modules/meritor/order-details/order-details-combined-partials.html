@@ -1,0 +1,326 @@
+<script id="tableWrapper" type="text/x-handlebars-template">
+    <div id="detail-page-header"></div>
+
+    <div class="table-top-bar">
+        <div class="top-bar-right">
+            <div class="clear-search-wrap">
+                <button class="clear-search-button">Clear Filter</button>
+            </div>
+            
+            <div class="header-btn-wrap">
+                <button class="previous-button">Return to Previous Page</button>
+            </div>
+            <div class="download-btn-cont left">
+                <a href="{{this.downloadUrl}}" download>Download</a>
+            </div>
+            <div class="header-btn-wrap">
+                <button type="button" class="contact-customer-service">Contact Customer Service</button>
+            </div>
+            
+            <div class="table-pagination-wrap"></div>
+        </div>
+    </div>
+    <div class="overflow-wrapper">
+        <div class="data-table-inner {{this.tableClass}} {{#if this.isExtraColumn}} {{this.extraColumnClass}} {{/if}}" id="{{this.tableId}}">
+            <div id="table-header" class="data-table-header"></div>
+            <div id="table-list-wrapper"></div>
+        </div>
+    </div>
+    <div class="table-footer">
+        <div class="footer-btn-wrap left">
+            {{#if this.requestReturn.isReturnQtyVisible}}
+            <button type="button" id="cancelReturnBtnDiv" class="cancel-request-return">{{this.requestReturn.cancelRequestBtnTitle}}</button>
+            {{/if}}
+        </div>
+        <div class="footer-btn-wrap">
+            {{#if this.requestReturn.isReturnQtyVisible}}
+            <button type="button" id="submitReturnBtnDiv" class="submit-request-return">{{this.requestReturn.submitRequestBtnTitle}}</button>            
+            {{else}}
+            <button type="button" class="request-return">{{this.requestReturn.requestReturnBtnTitle}}</button>
+            {{/if}}
+        </div>
+        <div class="table-pagination-wrap"></div>
+    </div>
+</script>
+
+<script id="detailPageHeader" type="text/x-handlebars-template">
+    <div class="detail-page-box">
+        <div class="page-heading">
+            <h2>Order Details</h2>
+        </div>
+        <div class="details-header">
+            <ul class="details-list">
+                <li>
+                    <div class="details-list-ind">
+                        <p><label>Ship To</label>{{{this.detailsData.SHIP_TO}}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="details-list-ind">
+                        <p><label>Customer P.O# </label>{{{this.detailsData.CUSTOMER_PO}}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="details-list-ind">
+                        <p><label>Release#</label>{{{this.detailsData.RELEASE}}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="details-list-ind">
+                        <p><label>Meritor Order #</label>{{{this.detailsData.MERITOR_PART}}}</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="details-list">
+                <li>
+                    <div class="details-list-ind">
+                        <p><label>Bill to</label>{{{this.detailsData.BILL_TO}}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="details-list-ind">
+                        <p><label>Order Date</label>{{{formattedDate this.detailsData.ORDER_DATE}}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="details-list-ind">
+                        <p><label>Order Type</label>{{{this.detailsData.ORDER_TYPE}}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="details-list-ind">
+                        <p><label>Freight</label></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script id="tableHeader" type="text/x-handlebars-template">
+    <div class="table-header-ind">
+        {{#each this.headerConfig as |headerInd|}}
+        <div class="table-col {{headerInd.className}} {{#ifEq ../this.currentSortKey headerInd.keyName}}{{../../this.currentSortType}}{{/ifEq}}" data-colKeyName="{{headerInd.keyName}}">
+            {{#if headerInd.sorting}}
+            <h3 class="sorting-title" data-appliedSorting="{{#ifEq ../../this.currentSortKey headerInd.keyName}}{{../../../this.currentSortType}}{{/ifEq}}">
+                <span class="title">{{headerInd.title}}</span>
+                <span class="sorting-control"></span>
+            </h3>
+            {{else}}
+               <h3><span class="title">{{headerInd.title}}</span></h3>
+            {{/if}}
+            {{#ifEq headerInd.operationType "search"}}
+                <span class="search-icon"><i class="fa fa-search"></i></span>
+                <div class="search-box-ind">
+                    <input type="text" data-searchKey="{{headerInd.keyName}}" placeholder="Filter Results"/>
+                </div>
+            {{/ifEq}}
+
+            {{#ifEq headerInd.operationType "showList"}}
+                <span class="list-icon" data-colKey="{{headerInd.keyName}}" data-listBoxId="showListWrapper{{headerInd.keyName}}"><i class="fa fa-list"></i></span>
+                <div class="list-box-wrapper" id="showListWrapper{{headerInd.keyName}}"></div>
+                <div class="selected-options-text"></div>
+            {{/ifEq}}
+
+            {{#ifEq headerInd.operationType "fromToDate"}}
+                <span class="date-icon" data-colKey="{{headerInd.keyName}}" data-dateboxid="datebox{{headerInd.keyName}}"><i class="fa fa-calendar"></i></span>
+                <div class="date-box-wrapper" id="datebox{{headerInd.keyName}}">
+                    <a href="#" class="close-date-picker" data-dateboxid="datebox{{headerInd.keyName}}"><i class="fa fa-times"></i></a>
+                    <div class="calender-wrapper">
+                        <div id="from-date-calender{{headerInd.keyName}}" data-keyName="{{headerInd.keyName}}" class="datepicker-here from-to-calender" data-language='en'></div>
+                        <div id="to-date-calender{{headerInd.keyName}}" data-keyName="{{headerInd.keyName}}" class="datepicker-here from-to-calender" data-language='en'></div>
+                    </div>
+
+                    <div class="calender-bottom">
+                        {{#if ../../this.isExpandDateButton}}
+                            <button type="button" class="date-advance-search-btn">Expand Date Range</button>
+                        {{/if}}
+                        <button type="button" class="date-submit-btn" data-keyName="{{headerInd.keyName}}">Filter</button>
+                    </div>
+                </div>
+                <div class="fromto-dates-text" id="dates-text{{headerInd.keyName}}"></div>
+            {{/ifEq}}
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<script id="tableList" type="text/x-handlebars-template">
+    {{#if this.data}}
+    <ul id="table-list" class="data-table-list">
+            {{#each this.data as |returnInd|}}
+                <li class="{{#ifEq returnInd.SHOWEMPTY 'Y'}} child {{/ifEq}}" data-matchingComb="{{returnInd.MERITOR_PART}}{{returnInd.MERITOR_ORDER}}">
+                    <div class="table-list-ind">
+                        <div class="table-col meritor-part">
+                            <p>{{returnInd.MERITOR_PART}}</p>
+                        </div>
+                        <div class="table-col customer-po">
+                            <p>{{returnInd.CUSTOMER_PO}}</p>
+                        </div>
+                        <div class="table-col request-date">
+                            <p>{{formattedDate returnInd.CUSTOMER_REQUEST_DATE}}</p>
+                        </div>
+                        <div class="table-col qty-ordered">
+                            <p>{{returnInd.QTY_ORDERED}}</p>
+                        </div>
+                        <div class="table-col line-qty">
+                            <p>{{returnInd.LINE_ITEM_QTY}}</p>
+                        </div>
+                        <div class="table-col status">
+                            <p><a href="#" class="status-popup-btn" popup-details='{"shipFrom": "{{returnInd.SHIPPED_FROM}}", "customerRequestDate": "{{returnInd.CUSTOMER_REQUEST_DATE}}", "originalPromiseDate": "{{returnInd.PROMISE_DATE}}", "revisedPromiseDate": "{{returnInd.REVISED_PROMISE_DATE}}", "additionalComments":"{{returnInd.ADDITIONAL_COMMENT}}", "processDate":"{{returnInd.ORDER_DATE}}", "shipDate":"{{returnInd.SHIPPED}}", "carrierName":"{{returnInd.CARRIER}}", "trackingNo":"{{returnInd.TRACKING_NUMBER}}", "billOfLading":"{{returnInd.BILL_OF_LANDING}}", "status":"{{returnInd.LINE_ITEM_STATUS}}"}'>{{returnInd.LINE_ITEM_STATUS}} Details</a></p>
+                        </div>
+                        <div class="table-col invoice">
+                            <p>{{returnInd.INVOICE}}</p>
+                        </div>
+                        {{#if ../this.isReturnQtyVisible}}
+                        <div class="table-col return-qty">
+                            {{#if returnInd.INVOICE}}
+                                <input name="returnQty_{{@index}}" id="returnQty_{{@index}}"  type="number" size="3" maxlength="3" min="0" max="{{returnInd.MAX_QTY}}" value=""/>
+                            {{/if}}
+                        </div>
+                        {{/if}}
+                    </div>
+                </li>
+            {{/each}}
+        
+    </ul>
+    {{else}}
+        <div class="no-data-found"><h3>No Data Found</h3></div>
+    {{/if}}
+</script>
+
+<script id="columnList" type="text/x-handlebars-template">
+    <ul class="list">
+        {{#each this.columnListArr as |listInd|}}
+            {{#isEmpty listInd ""}}
+            <li>
+                <div class="list-ind" data-id="{{listInd}}">
+                    <input type="checkbox" id="shiplist{{@index}}" value="{{listInd}}" data-shipCode="" {{{checkIsSelected listInd ../../this.selectedCodes}}}>
+                    <label for="shiplist{{@index}}">{{{listInd}}}</label>
+                </div>
+            </li>
+            {{/isEmpty}}
+        {{/each}}
+    </ul>
+    <div class="filter-btn-row">
+        <button type="button" class="options-clearall-btn">Clear All</button>
+        <button type="button" class="options-filter-btn">Filter</button>
+    </div>
+</script>
+
+<script id="tablePagination" type="text/x-handlebars-template">
+    <ul class="pagination-list">
+        {{#if this.willShowPrevButton}}
+        <li><span class="prev-next-btn prev-btn"><i class="fa fa-angle-left"></i></span></li>
+        {{/if}}
+        {{#each this.pageList as |pageListInd| }}
+        {{#ifEq pageListInd "..."}}
+            <li class="blank">{{pageListInd}}</li>
+            {{else}}
+            <li class="{{#ifEq pageListInd ../../this.currentPageId}}active{{/ifEq}}"><span class="page-id-btn" data-pageId="{{pageListInd}}">{{pageListInd}}</span></li>
+        {{/ifEq}}
+        {{/each}}
+        {{#if this.willShowNextButton}}
+       <li><span class="prev-next-btn next-btn"><i class="fa fa-angle-right"></i></span></li>
+        {{/if}}
+    </ul>
+</script>
+
+<script id="tableStatusPopup" type="text/x-handlebars-template">
+    <div class="status-popup-inner">
+        <a href="#" class="close-status-popup" tabindex="0" id="close-status-popup-btn">
+            <i class="fa fa-close" aria-hidden="true"></i>
+        </a>
+        <div class="status-title-box">
+            <h4>Line Item Status</h4>
+        </div>
+        <div class="status-head">
+            {{#ifEq ./this.details.status 'Open'}}
+            <img src="{{this.imageUrl}}order-open-status.png" alt="" />
+            {{/ifEq}}
+            {{#ifEq ./this.details.status 'In Process'}}
+            <img src="{{this.imageUrl}}order-inprocess-status.png" alt="" />
+            {{/ifEq}}
+            {{#ifEq ./this.details.status 'Shipped'}}
+            <img src="{{this.imageUrl}}order-shipped-status.png" alt="" />
+            {{/ifEq}}
+        </div>
+
+        <div class="status-desc-box">
+            {{#ifEq ./this.details.status 'Open'}}
+            <ul class="status-desc-list">
+                <li>
+                    <div class="status-desc-ind">
+                        <p><label>Ship From: </label>{{./this.details.shipFrom}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="status-desc-ind">
+                        <p><label>Customer Request Date: </label>{{formattedDate ./this.details.customerRequestDate}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="status-desc-ind">
+                        <p><label>Promise Date: </label>{{formattedDate ./this.details.originalPromiseDate}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="status-desc-ind">
+                        <p><label>Revised Promise Date: </label>{{formattedDate ./this.details.revisedPromiseDate}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="status-desc-ind">
+                        <p><label>Addiional Comments: </label>{{./this.details.additionalComments}}</p>
+                    </div>
+                </li>
+            </ul>
+            {{/ifEq}}
+
+            {{#ifEq ./this.details.status 'In Process'}}
+                <ul class="status-desc-list">
+                    <li>
+                        <div class="status-desc-ind">
+                            <p><label>Process Date: </label>{{formattedDate ./this.details.processDate}}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="status-desc-ind">
+                            <p><label>Ship From: </label>{{./this.details.shipFrom}}</p>
+                        </div>
+                    </li>
+                </ul>
+            {{/ifEq}}
+
+            {{#ifEq ./this.details.status 'Shipped'}}
+                <ul class="status-desc-list">
+                    <li>
+                        <div class="status-desc-ind">
+                            <p><label>Shipped: </label>{{formattedDate ./this.details.shipDate}}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="status-desc-ind">
+                            <p><label>Shipped From: </label>{{./this.details.shipFrom}}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="status-desc-ind">
+                            <p><label>Carrier: </label>{{./this.details.carrierName}}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="status-desc-ind">
+                            <p><label>Tracking Number: </label>{{./this.details.trackingNo}}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="status-desc-ind">
+                            <p><label>Bill of Lading: </label>{{./this.details.billOfLading}}</p>
+                        </div>
+                    </li>
+                </ul>
+            {{/ifEq}}
+        </div>
+    </div>
+</script>

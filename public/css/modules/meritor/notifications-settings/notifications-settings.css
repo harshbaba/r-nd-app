@@ -1,0 +1,117 @@
+.notifications-outer{
+    float: left;
+    width: 100%;
+}
+.heading-bar{
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.heading-bar > h3{
+    font-size: 24px;
+}
+.notifications-table{
+    float: left;
+    width: 100%;
+    border: 1px solid #d0cdd1;
+}
+
+.notifications-row-ind{
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #d0cdd1;;
+}
+.notifications-row-ind:last-child{
+    border-bottom: 0;
+}
+.notifications-col{
+    display: table-cell;
+    width: 33%;
+    text-align: center;
+    padding: 0px 5px;
+    border-right: 1px solid #d0cdd1;
+    vertical-align: middle;
+}
+.notifications-col:last-child{
+    border-right: 0;
+}
+.notifications-col:first-child{
+    text-align: left;
+}
+
+.notifications-col > h3{
+    color: #a41f35;
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.notifications-col > p{
+    color: #a41f35;
+    font-size: 16px;
+    line-height: 30px;
+    
+}
+
+.order-2col-wrap{
+    float: left;
+    width: 100%;
+}
+.order-2col{
+    float: left;
+    width: 50%;
+    border-right: 1px solid #d0cdd1;
+}
+.order-2col:last-child{
+    border-right: 0;
+}
+
+.order-2col > h3{
+    color: #a41f35;
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: bold;
+}
+.order-2col .checkbox-ind{
+    display: inline-block;
+    position: relative;
+    padding: 12px 0 0px;
+}
+.order-2col .checkbox-ind > label{
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 2px solid #767676;
+}
+.order-2col .checkbox-ind > input[type="checkbox"]{
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+}
+
+
+.order-2col .checkbox-ind > input[type="checkbox"][readonly] + label{
+    /* pointer-events: none; */
+}
+
+.order-2col .checkbox-ind > input[type="checkbox"][readonly] + label{
+    opacity: 0.6;
+}
+
+.order-2col .checkbox-ind > input[type="checkbox"][readonly] + label::before{
+    opacity: 0.6;
+}
+
+.order-2col .checkbox-ind > input[type="checkbox"]:checked + label::before{
+    position: absolute;
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    color: #767676;
+    font-size: 13px;
+    top: 1px;
+    left: 9px;
+    line-height: 16px;
+}

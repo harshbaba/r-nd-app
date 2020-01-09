@@ -1,0 +1,8 @@
+.form-changes.contact-us-box input[type="text"],
+.form-changes.contact-us-box input[type="email"]{
+max-width: 550px;
+}
+
+.form-changes.contact-us-box textarea{
+    max-width: 750px;
+}

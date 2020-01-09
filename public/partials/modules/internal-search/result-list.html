@@ -1,0 +1,86 @@
+{{#ifEq this.currentDocType "all"}}
+    <!-- KB Article -->
+    {{#each this.list.response.docs as |doc| }}
+    <div class="con_KBArticle d-flex justify-content-between align-items-start">
+        <div class="icn_type mr-3 text-center">
+            <img src="images/img/content/icn-knowledgebase-40x40.svg" />
+            <!-- <div class="d-flex justify-content-between align-items-center mt-1">
+                <span class="mdi mdi-emoticon-excited mr-1"></span><span>999</span>
+            </div> -->
+        </div>
+        <div class="con_ItemSummary w-100">
+            <a href="javascript:;" target="_parent">
+                <h5 class="txt_ItemTitle mb-1">{{doc.title}}</h5>
+            </a>
+            <span class="txt_ItemDate date-text mr-3">{{doc.last_modified_date}}</span>
+            <!--<span class="badge badge-warning">Restricted content</span>-->
+            <p class="txt_ItemText desc-text mt-1">{{getContent doc.id ../this.list.highlighting}}</p>
+        </div>
+    </div>
+    {{/each}}
+    <!-- /KB Article -->
+{{/ifEq}}
+
+
+{{#ifEq this.currentDocType "osc_support_internal"}}
+    <!-- KB Article -->
+    {{#each this.list.response.docs as |doc| }}
+    <div class="con_KBArticle d-flex justify-content-between align-items-start">
+        <div class="icn_type mr-3 text-center">
+            <img src="images/img/content/icn-knowledgebase-40x40.svg" />
+            <!-- <div class="d-flex justify-content-between align-items-center mt-1">
+                <span class="mdi mdi-emoticon-excited mr-1"></span><span>999</span>
+            </div> -->
+        </div>
+        <div class="con_ItemSummary w-100">
+            <a href="javascript:;" target="_parent">
+                <h5 class="txt_ItemTitle mb-1">{{doc.title}}</h5>
+            </a>
+            <span class="txt_ItemDate date-text mr-3">{{doc.last_modified_date}}</span>
+            <!--<span class="badge badge-warning">Restricted content</span>-->
+            <p class="txt_ItemText desc-text mt-1">{{getContent doc.id ../this.list.highlighting}}</p>
+        </div>
+    </div>
+    {{/each}}
+    <!-- /KB Article -->
+{{/ifEq}}
+
+
+{{#ifEq this.currentDocType "dw"}}
+    <!-- KB Article -->
+    {{#each this.list.response.docs as |doc| }}
+    <div class="con_CaseItem d-flex justify-content-between align-items-start">
+        <div class="icn_type mr-3 text-center">
+            <img src="images/img/content/icn-supportcases-40x40.svg">
+        </div>
+        <div class="con_ItemSummary w-100">
+            <a href="javascript:;" target="_parent">
+            <h5 class="txt_ItemTitle mb-1">{{doc.title}}</h5>
+            </a>
+            <span class="txt_ItemDate date-text mr-3">{{doc.last_modified_date}}</span>
+            <p class="txt_ItemText desc-text mt-1">{{getContent doc.id ../this.list.highlighting}}</p>
+        </div>
+    </div>
+    {{/each}}
+    <!-- /KB Article -->
+{{/ifEq}}
+
+{{#ifEq this.currentDocType "etrack"}}
+    <!-- KB Article -->
+    {{#each this.list.response.docs as |doc| }}
+    <div class="con_EtracksItem d-flex justify-content-between align-items-start">
+        <div class="icn_type mr-3 text-center">
+            <img src="images/img/content/icn-etracks-40x40.svg">
+        </div>
+        <div class="con_ItemSummary w-100">
+            <a href="javascript:;" target="_parent">
+            <h5 class="txt_ItemTitle mb-1">{{doc.title}}</h5>
+            </a>
+            <span class="txt_ItemDate date-text mr-3">{{doc.last_modified_date}}</span>
+            <p class="txt_ItemText desc-text mt-1">{{getContent doc.id ../this.list.highlighting}}</p>
+        </div>
+    </div>
+    {{/each}}
+    <!-- /KB Article -->
+{{/ifEq}}
+
